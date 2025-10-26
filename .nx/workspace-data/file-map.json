@@ -51,6 +51,26 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": "ARCHITECTURE.md",
+        "hash": "11095640533682211180"
+      },
+      {
+        "file": "DEPLOYMENT.md",
+        "hash": "9587723095712302528"
+      },
+      {
+        "file": "README.md",
+        "hash": "17779297153991470282"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "5073346764974627200"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "3865847730196700379"
+      },
+      {
         "file": ".gemini/settings.json",
         "hash": "5921792102792576356"
       },
@@ -59,44 +79,12 @@
         "hash": "5851218067189572393"
       },
       {
-        "file": ".mcp.json",
-        "hash": "16635761437242934062"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "10945013772211001795"
-      },
-      {
-        "file": "AGENTS.md",
-        "hash": "5706578983456977230"
-      },
-      {
-        "file": "ARCHITECTURE.md",
-        "hash": "11095640533682211180"
-      },
-      {
         "file": "CLAUDE.md",
         "hash": "5706578983456977230"
       },
       {
-        "file": "CONTRIBUTING.md",
-        "hash": "5073346764974627200"
-      },
-      {
-        "file": "DEPLOYMENT.md",
-        "hash": "9587723095712302528"
-      },
-      {
-        "file": "PROJECT_SUMMARY.md",
-        "hash": "13796446490577057398"
-      },
-      {
-        "file": "README.md",
-        "hash": "17779297153991470282"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10786912969479474318"
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
       },
       {
         "file": "package.json",
@@ -107,16 +95,28 @@
         "hash": "15302045508457890597"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "3865847730196700379"
+        "file": ".mcp.json",
+        "hash": "16635761437242934062"
+      },
+      {
+        "file": "PROJECT_SUMMARY.md",
+        "hash": "13796446490577057398"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10786912969479474318"
       },
       {
         "file": "tsconfig.base.json",
         "hash": "423351731074598405"
       },
       {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
+        "file": ".vscode/extensions.json",
+        "hash": "10945013772211001795"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "5706578983456977230"
       }
     ],
     "projectFileMap": {
@@ -171,7 +171,7 @@
         },
         {
           "file": "apps/web/vite.config.ts",
-          "hash": "3946085494849478146",
+          "hash": "6230150956888242036",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react"

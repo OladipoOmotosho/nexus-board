@@ -1,28 +1,28 @@
-
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../node_modules/.vite/web',
-  server:{
+  cacheDir: "../node_modules/.vite/web",
+  server: {
     port: 4200,
-    host: 'localhost',
+    host: "localhost",
+    open: true,
   },
-  preview:{
+  preview: {
     port: 4200,
-    host: 'localhost',
+    host: "localhost",
   },
-  plugins: [react(), ],
+  plugins: [react()],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    'emptyOutDir': true,
-    'transformMixedEsModules': true,
-    'outDir': "./dist",
-    'reportCompressedSize': true,
-    'commonjsOptions': {"transformMixedEsModules":true},
+    emptyOutDir: true,
+    transformMixedEsModules: true,
+    outDir: "./dist",
+    reportCompressedSize: true,
+    commonjsOptions: { transformMixedEsModules: true },
   },
 }));
