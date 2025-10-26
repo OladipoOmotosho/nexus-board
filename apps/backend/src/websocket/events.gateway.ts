@@ -28,18 +28,24 @@ export class EventsGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('message')
-  handleMessage(@MessageBody() data: any, @ConnectedSocket() client: Socket) {
+  handleMessage(@MessageBody() data: any) {
     return { event: 'message', data };
   }
 
   @SubscribeMessage('joinBoard')
-  handleJoinBoard(@MessageBody() boardId: string, @ConnectedSocket() client: Socket) {
+  handleJoinBoard(
+    @MessageBody() boardId: string,
+    @ConnectedSocket() client: Socket,
+  ) {
     client.join(`board-${boardId}`);
     return { event: 'joinedBoard', data: boardId };
   }
 
   @SubscribeMessage('leaveBoard')
-  handleLeaveBoard(@MessageBody() boardId: string, @ConnectedSocket() client: Socket) {
+  handleLeaveBoard(
+    @MessageBody() boardId: string,
+    @ConnectedSocket() client: Socket,
+  ) {
     client.leave(`board-${boardId}`);
     return { event: 'leftBoard', data: boardId };
   }
