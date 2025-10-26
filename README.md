@@ -1,133 +1,229 @@
 # Nexus Board
 
-Team collaboration platform built with Next.js and NestJS in a monorepo setup.
+A modern full-stack team collaboration platform built with cutting-edge technologies.
 
-## 🏗️ Project Structure
+## 🚀 Tech Stack
+
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful, accessible UI components
+- **Zustand** - Lightweight state management
+- **React Query** - Server state management
+- **Auth.js (NextAuth)** - Authentication solution
+
+### Backend
+- **NestJS** - Progressive Node.js framework
+- **TypeScript** - Type-safe backend development
+- **Prisma ORM** - Type-safe database access
+- **PostgreSQL** - Robust relational database
+- **Socket.IO** - Real-time bidirectional communication
+- **Zod** - Schema validation
+
+### Infrastructure
+- **Docker & Docker Compose** - Containerization
+- **Redis** - WebSocket scaling and caching
+- **GitHub Actions** - CI/CD pipeline
+- **Railway/Render** - Cloud hosting platforms
+
+## 📋 Prerequisites
+
+- Node.js 18+ 
+- pnpm 8+
+- Docker and Docker Compose (for local development)
+- PostgreSQL (if not using Docker)
+- Redis (if not using Docker)
+
+## 🛠️ Getting Started
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/OladipoOmotosho/nexus-board.git
+   cd nexus-board
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Set up environment variables**
+   
+   For the frontend:
+   ```bash
+   cp apps/frontend/.env.example apps/frontend/.env.local
+   ```
+   
+   For the backend:
+   ```bash
+   cp apps/backend/.env.example apps/backend/.env
+   ```
+   
+   Update the values in both `.env` files as needed.
+
+4. **Start the development environment with Docker**
+   ```bash
+   pnpm docker:dev
+   ```
+   
+   This will start:
+   - PostgreSQL on port 5432
+   - Redis on port 6379
+   - Backend API on port 3001
+   - Frontend on port 3000
+
+### Alternative: Manual Setup (without Docker)
+
+1. **Start PostgreSQL and Redis locally**
+
+2. **Set up the database**
+   ```bash
+   cd apps/backend
+   pnpm prisma generate
+   pnpm prisma migrate dev
+   ```
+
+3. **Start the backend**
+   ```bash
+   cd apps/backend
+   pnpm dev
+   ```
+
+4. **Start the frontend** (in a new terminal)
+   ```bash
+   cd apps/frontend
+   pnpm dev
+   ```
+
+5. **Access the application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:3001
+   - API Health Check: http://localhost:3001/health
+
+## 📁 Project Structure
 
 ```
 nexus-board/
 ├── apps/
-│   ├── web/                    # Next.js frontend (App Router)
-│   └── api/                    # NestJS backend
-├── packages/
-│   ├── ui/                     # Shared UI components
-│   └── types/                  # Shared TypeScript types & Zod schemas
+│   ├── frontend/          # Next.js application
+│   │   ├── src/
+│   │   │   ├── app/       # App Router pages
+│   │   │   ├── components/# React components
+│   │   │   ├── lib/       # Utilities and helpers
+│   │   │   └── store/     # Zustand stores
+│   │   └── public/        # Static assets
+│   │
+│   └── backend/           # NestJS application
+│       ├── src/
+│       │   ├── auth/      # Authentication module
+│       │   ├── users/     # Users module
+│       │   ├── websocket/ # Socket.IO gateway
+│       │   └── prisma/    # Prisma service
+│       └── prisma/        # Database schema
+│
+├── packages/              # Shared packages (optional)
 ├── .github/
-│   └── workflows/              # CI/CD pipelines
-├── package.json                # Root package.json with workspaces
-├── pnpm-workspace.yaml         # pnpm workspace configuration
-├── turbo.json                  # Turborepo configuration
-└── .env.example                # Environment variables template
+│   └── workflows/         # CI/CD pipelines
+├── docker-compose.yml     # Docker orchestration
+├── pnpm-workspace.yaml    # pnpm workspace config
+└── package.json           # Root package.json
 ```
 
-## 🚀 Getting Started
+## 🧪 Development
 
-### Prerequisites
+### Available Scripts
 
-- Node.js >= 18.0.0
-- pnpm >= 8.0.0
+From the root directory:
 
-### Installation
+- `pnpm dev` - Start both frontend and backend in development mode
+- `pnpm build` - Build both applications
+- `pnpm lint` - Lint all packages
+- `pnpm test` - Run tests for all packages
+- `pnpm docker:dev` - Start development environment with Docker
+- `pnpm docker:down` - Stop Docker containers
+
+### Database Commands
 
 ```bash
-# Install dependencies
-pnpm install
+# Generate Prisma Client
+pnpm prisma:generate
 
-# Copy environment variables
-cp .env.example .env
+# Create and apply migrations
+pnpm prisma:migrate
+
+# Open Prisma Studio
+cd apps/backend && pnpm prisma:studio
 ```
 
-### Development
+## 🔒 Authentication
 
-```bash
-# Run all apps in development mode
-pnpm dev
+The application uses Auth.js (NextAuth) for authentication on the frontend and JWT-based authentication on the backend. 
 
-# Run specific app
-pnpm --filter @nexus-board/web dev
-pnpm --filter @nexus-board/api dev
+To register a new user, send a POST request to `/auth/register` with:
+```json
+{
+  "email": "user@example.com",
+  "password": "yourpassword",
+  "name": "Your Name"
+}
 ```
 
-### Building
+## 🔌 WebSocket/Real-time Features
 
-```bash
-# Build all apps
-pnpm build
+Socket.IO is configured for real-time features. Connect to the WebSocket server at `http://localhost:3001`:
 
-# Build specific app
-pnpm --filter @nexus-board/web build
-pnpm --filter @nexus-board/api build
-```
+- `joinBoard` - Join a board room
+- `leaveBoard` - Leave a board room
+- `message` - Send a message
 
-### Testing
+## 🚢 Deployment
 
-```bash
-# Run all tests
-pnpm test
+### Using Railway
 
-# Run specific app tests
-pnpm --filter @nexus-board/web test
-pnpm --filter @nexus-board/api test
-```
+1. Install Railway CLI
+2. Link your project: `railway link`
+3. Deploy: `railway up`
 
-## 📦 Workspaces
+### Using Render
 
-### apps/web
-Next.js 14 application with App Router featuring:
-- Authentication pages (`/sign-in`)
-- Dashboard interface (`/dashboard`)
-- API routes for edge functions
-- Shared components and utilities
+1. Connect your GitHub repository to Render
+2. Configure environment variables
+3. Deploy from the Render dashboard
 
-### apps/api
-NestJS application with:
-- RESTful API endpoints
-- WebSocket support (Socket.IO)
-- Prisma ORM for database management
-- JWT & OAuth authentication (Google)
-- Modular architecture (users, teams, boards, tasks, etc.)
+### Environment Variables for Production
 
-### packages/ui
-Shared UI component library with:
-- Reusable React components
-- Consistent styling
+Make sure to set these in your hosting platform:
 
-### packages/types
-Shared TypeScript definitions with:
-- Zod schemas for validation
-- Type definitions used across apps
+**Backend:**
+- `DATABASE_URL` - PostgreSQL connection string
+- `JWT_SECRET` - Secret key for JWT
+- `REDIS_HOST` - Redis host
+- `REDIS_PORT` - Redis port
+- `FRONTEND_URL` - Frontend URL for CORS
 
-## 🗄️ Database
+**Frontend:**
+- `NEXT_PUBLIC_API_URL` - Backend API URL
+- `NEXT_PUBLIC_WS_URL` - WebSocket URL
+- `NEXTAUTH_URL` - Your frontend URL
+- `NEXTAUTH_SECRET` - Secret for NextAuth
 
-The project uses PostgreSQL with Prisma ORM.
+## 🤝 Contributing
 
-```bash
-# Generate Prisma client
-pnpm --filter @nexus-board/api prisma:generate
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Submit a pull request
 
-# Run migrations
-pnpm --filter @nexus-board/api prisma:migrate
+## 📄 License
 
-# Seed database
-pnpm --filter @nexus-board/api prisma:seed
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔧 Environment Variables
+## 🙏 Acknowledgments
 
-See `.env.example` for required environment variables:
-- Database connection
-- JWT secrets
-- OAuth credentials (Google)
-- API URLs
-
-## 🧪 CI/CD
-
-GitHub Actions workflow runs on push/PR to main/develop:
-- Linting
-- Type checking
-- Build verification
-- Tests
-
-## 📝 License
-
-See [LICENSE](./LICENSE) file for details.
+- Built with modern best practices
+- Inspired by leading collaboration platforms
+- Powered by open-source technologies

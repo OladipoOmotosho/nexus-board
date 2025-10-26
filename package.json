@@ -1,25 +1,28 @@
 {
   "name": "nexus-board",
   "version": "1.0.0",
-  "private": true,
   "description": "Team collaboration platform",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "private": true,
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean"
+    "dev": "pnpm --filter=frontend dev & pnpm --filter=backend dev",
+    "build": "pnpm --filter=frontend build && pnpm --filter=backend build",
+    "start": "pnpm --filter=frontend start & pnpm --filter=backend start",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --recursive test",
+    "docker:dev": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "prisma:migrate": "pnpm --filter=backend prisma:migrate",
+    "prisma:generate": "pnpm --filter=backend prisma:generate"
   },
-  "devDependencies": {
-    "turbo": "^2.0.0"
-  },
+  "keywords": [
+    "collaboration",
+    "team",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
-  },
-  "packageManager": "pnpm@8.15.0"
+  }
 }
