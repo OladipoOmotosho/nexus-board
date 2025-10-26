@@ -56,7 +56,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "6605147475960594820"
+        "hash": "5851218067189572393"
       },
       {
         "file": ".mcp.json",
@@ -120,12 +120,6 @@
       }
     ],
     "projectFileMap": {
-      "api": [
-        {
-          "file": "apps/api/project.json",
-          "hash": "11042671037508349635"
-        }
-      ],
       "web": [
         {
           "file": "apps/web/index.html",
@@ -182,6 +176,12 @@
             "npm:vite",
             "npm:@vitejs/plugin-react"
           ]
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/project.json",
+          "hash": "11042671037508349635"
         }
       ]
     }
