@@ -4,11 +4,11 @@
   "description": "Team collaboration platform",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter=frontend dev & pnpm --filter=backend dev",
-    "build": "pnpm --filter=frontend build && pnpm --filter=backend build",
-    "start": "pnpm --filter=frontend start & pnpm --filter=backend start",
-    "lint": "pnpm --recursive lint",
-    "test": "pnpm --recursive test",
+    "dev": "pnpm --parallel --filter=frontend --filter=backend dev",
+    "build": "turbo run build",
+    "start": "pnpm --parallel --filter=frontend --filter=backend start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
     "docker:dev": "docker-compose up",
     "docker:down": "docker-compose down",
     "prisma:migrate": "pnpm --filter=backend prisma:migrate",
@@ -23,6 +23,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "turbo": "^1.11.0"
   }
 }
