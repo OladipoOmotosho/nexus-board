@@ -1,13 +1,7 @@
 packages:
-  - apps/*
-  - packages/*
-
+  - "apps/*"
+  - "packages/*"
+  - "web"
 onlyBuiltDependencies:
-  - '@nestjs/core'
-  - '@prisma/client'
-  - '@prisma/engines'
-  - '@swc/core'
-  - bcrypt
-  - prisma
-  - sharp
-  - unrs-resolver
+  - "esbuild"
+  - "nx"

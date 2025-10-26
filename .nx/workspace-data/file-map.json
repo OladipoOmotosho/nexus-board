@@ -1,0 +1,190 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.0.1",
+  "pathMappings": {
+    "@ui/*": [
+      "packages/ui/src/*"
+    ],
+    "@types/*": [
+      "packages/types/src/*"
+    ],
+    "@api/*": [
+      "apps/api/src/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "devTargetName": "dev",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    },
+    {
+      "name": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".gemini/settings.json",
+        "hash": "5921792102792576356"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6605147475960594820"
+      },
+      {
+        "file": ".mcp.json",
+        "hash": "16635761437242934062"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "10945013772211001795"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "5706578983456977230"
+      },
+      {
+        "file": "ARCHITECTURE.md",
+        "hash": "11095640533682211180"
+      },
+      {
+        "file": "CLAUDE.md",
+        "hash": "5706578983456977230"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "5073346764974627200"
+      },
+      {
+        "file": "DEPLOYMENT.md",
+        "hash": "9587723095712302528"
+      },
+      {
+        "file": "PROJECT_SUMMARY.md",
+        "hash": "13796446490577057398"
+      },
+      {
+        "file": "README.md",
+        "hash": "17779297153991470282"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10786912969479474318"
+      },
+      {
+        "file": "package.json",
+        "hash": "906753395596414497"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "15302045508457890597"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "3865847730196700379"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "423351731074598405"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
+      }
+    ],
+    "projectFileMap": {
+      "api": [
+        {
+          "file": "apps/api/project.json",
+          "hash": "11042671037508349635"
+        }
+      ],
+      "web": [
+        {
+          "file": "apps/web/index.html",
+          "hash": "10230306946906184829"
+        },
+        {
+          "file": "apps/web/package.json",
+          "hash": "15784271339180289365"
+        },
+        {
+          "file": "apps/web/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/web/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/web/src/app/app.tsx",
+          "hash": "17622252949918416740"
+        },
+        {
+          "file": "apps/web/src/app/nx-welcome.tsx",
+          "hash": "9633917329892615940"
+        },
+        {
+          "file": "apps/web/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/web/src/main.tsx",
+          "hash": "7944529105552768481",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/web/tsconfig.app.json",
+          "hash": "12830358968167672754"
+        },
+        {
+          "file": "apps/web/tsconfig.json",
+          "hash": "13625524351667860620"
+        },
+        {
+          "file": "apps/web/vite.config.ts",
+          "hash": "3946085494849478146",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "4431071417965054027"
+}
