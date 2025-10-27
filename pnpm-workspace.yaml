@@ -1,7 +1,9 @@
 packages:
-  - "apps/*"
-  - "packages/*"
-  - "web"
+  - apps/*
+  - packages/*
+  - web
+
 onlyBuiltDependencies:
-  - "esbuild"
-  - "nx"
+  - '@swc/core'
+  - esbuild
+  - nx
