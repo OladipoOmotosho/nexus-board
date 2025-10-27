@@ -96,15 +96,19 @@
       },
       {
         "file": "package.json",
-        "hash": "7077282236936585521"
+        "hash": "10764736375448557016"
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "4539642720492358665"
+        "hash": "5646205797146438413"
       },
       {
         "file": "pnpm-workspace.yaml",
         "hash": "6742193365340070648"
+      },
+      {
+        "file": "postcss.config.js",
+        "hash": "7749705898111132596"
       },
       {
         "file": "tsconfig.base.json",
@@ -116,10 +120,16 @@
       }
     ],
     "projectFileMap": {
+      "api": [
+        {
+          "file": "apps/api/project.json",
+          "hash": "11042671037508349635"
+        }
+      ],
       "web": [
         {
           "file": "apps/web/index.html",
-          "hash": "10230306946906184829"
+          "hash": "12069462241743683123"
         },
         {
           "file": "apps/web/package.json",
@@ -190,7 +200,7 @@
         },
         {
           "file": "apps/web/src/app/app.module.css",
-          "hash": "8887387885984320532"
+          "hash": "9555020943187963873"
         },
         {
           "file": "apps/web/src/app/app.tsx",
@@ -230,7 +240,7 @@
         },
         {
           "file": "apps/web/src/components/BentoGrid.tsx",
-          "hash": "6433674283239820271",
+          "hash": "17045310731571065750",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -279,7 +289,7 @@
         },
         {
           "file": "apps/web/src/components/HowItWorks.tsx",
-          "hash": "1169223396665548161",
+          "hash": "16349151700892073740",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -296,7 +306,7 @@
         },
         {
           "file": "apps/web/src/components/LandingNavbar.tsx",
-          "hash": "5988949576257119818",
+          "hash": "9986363099342883679",
           "deps": [
             "npm:react@18.3.1",
             "npm:lucide-react",
@@ -305,7 +315,7 @@
         },
         {
           "file": "apps/web/src/components/LandingPage.tsx",
-          "hash": "9001847594784997849",
+          "hash": "4207371174605001695",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -800,27 +810,38 @@
           "hash": "4103446487664408585"
         },
         {
-          "file": "apps/web/src/index.css",
-          "hash": "13186854659003999461"
-        },
-        {
-          "file": "apps/web/src/main.tsx",
-          "hash": "7611223323583794244",
+          "file": "apps/web/src/hooks/useTheme.ts",
+          "hash": "1971528463003749064",
           "deps": [
-            "npm:react-dom@18.3.1"
+            "npm:react@18.3.1"
           ]
         },
         {
-          "file": "apps/web/src/styles.css",
-          "hash": "5195668842064076916"
+          "file": "apps/web/src/index.css",
+          "hash": "47598607119874051"
+        },
+        {
+          "file": "apps/web/src/main.tsx",
+          "hash": "8175982933107999308",
+          "deps": [
+            "npm:react-dom@18.3.1"
+          ]
         },
         {
           "file": "apps/web/src/styles/globals.css",
           "hash": "10345233965933396584"
         },
         {
+          "file": "apps/web/src/styles/index.css",
+          "hash": "13186854659003999461"
+        },
+        {
+          "file": "apps/web/tailwind.config.js",
+          "hash": "11861405898839272045"
+        },
+        {
           "file": "apps/web/tsconfig.app.json",
-          "hash": "12830358968167672754"
+          "hash": "13242867920615898463"
         },
         {
           "file": "apps/web/tsconfig.json",
@@ -835,14 +856,8 @@
             "npm:vite-tsconfig-paths"
           ]
         }
-      ],
-      "api": [
-        {
-          "file": "apps/api/project.json",
-          "hash": "11042671037508349635"
-        }
       ]
     }
   },
-  "externalNodesHash": "14583234136453566327"
+  "externalNodesHash": "16564808267276799886"
 }

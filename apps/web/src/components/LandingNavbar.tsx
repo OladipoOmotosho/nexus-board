@@ -1,232 +1,343 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Menu, ChevronDown, X, Moon, Sun } from "lucide-react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Button } from "./ui/button";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { useTheme } from "../hooks/useTheme";
 
 interface LandingNavbarProps {
   onGetStarted: () => void;
   onSignIn: () => void;
 }
 
-const products = [
-  { name: "Task Management", description: "Organize and track your work" },
-  { name: "Team Collaboration", description: "Work together seamlessly" },
-  { name: "Project Boards", description: "Visualize your workflow" },
-  { name: "Analytics", description: "Insights and reporting" },
-];
+/* ------------------------- Data (memo-friendly) ------------------------- */
+const NAV_SECTIONS = {
+  products: [
+    { name: "Task Management", description: "Organize and track your work" },
+    { name: "Team Collaboration", description: "Work together seamlessly" },
+    { name: "Project Boards", description: "Visualize your workflow" },
+    { name: "Analytics", description: "Insights and reporting" },
+  ],
+  solutions: [
+    { name: "For Startups", description: "Scale your team efficiently" },
+    { name: "For Enterprise", description: "Enterprise-grade security" },
+    { name: "For Remote Teams", description: "Work from anywhere" },
+    { name: "For Agencies", description: "Manage client projects" },
+  ],
+  resources: [
+    { name: "Documentation", description: "Learn how to use Nexus" },
+    { name: "Blog", description: "Latest updates and insights" },
+    { name: "Community", description: "Connect with other users" },
+    { name: "Support", description: "Get help when you need it" },
+  ],
+} as const;
 
-const solutions = [
-  { name: "For Startups", description: "Scale your team efficiently" },
-  { name: "For Enterprise", description: "Enterprise-grade security" },
-  { name: "For Remote Teams", description: "Work from anywhere" },
-  { name: "For Agencies", description: "Manage client projects" },
-];
+type SectionKey = keyof typeof NAV_SECTIONS;
 
-const resources = [
-  { name: "Documentation", description: "Learn how to use Nexus" },
-  { name: "Blog", description: "Latest updates and insights" },
-  { name: "Community", description: "Connect with other users" },
-  { name: "Support", description: "Get help when you need it" },
-];
+/* ------------------------- Motion Variants ------------------------- */
+const fadeDown = {
+  initial: { opacity: 0, y: -8 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -8 },
+};
 
+const dropdownVariants = {
+  initial: { opacity: 0, y: 8, scale: 0.98 },
+  animate: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: 8, scale: 0.98 },
+};
+
+const overlayVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
+const panelVariants = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.95 },
+};
+
+/* ------------------------- Component ------------------------- */
 export function LandingNavbar({ onGetStarted, onSignIn }: LandingNavbarProps) {
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [activeDropdown, setActiveDropdown] = useState<SectionKey | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
+  const { theme, setTheme } = useTheme();
+  // subtle scroll state for glass nav elevation
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dropdownContent = {
-    products,
-    solutions,
-    resources,
+  const sections = useMemo(
+    () => ["products", "solutions", "resources"] as SectionKey[],
+    []
+  );
+
+  const baseTransition = {
+    duration: reduceMotion ? 0 : 0.18,
+    ease: "easeInOut" as const, // ✅ valid easing type
   };
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      variants={fadeDown}
+      initial="initial"
+      animate="animate"
+      transition={{
+        duration: reduceMotion ? 0 : 0.35,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className={[
+        "fixed top-0 left-0 right-0 z-50 w-full transition-colors",
+        "border-b border-border/60",
+        // soft glassmorphism using your tokens
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
+          ? "bg-background/60 backdrop-blur-md shadow-sm"
+          : "bg-background/30 backdrop-blur-sm",
+      ].join(" ")}
+      role="navigation"
+      aria-label="Primary"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Row */}
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-2"
-          >
+          <div className="flex items-center gap-2">
             <div
-              className="size-9 rounded-lg flex items-center justify-center"
+              className="size-9 rounded-lg flex items-center justify-center border border-border/60"
               style={{
-                background: `linear-gradient(135deg, var(--hero-gradient-from), var(--hero-gradient-via))`,
+                background:
+                  "linear-gradient(135deg,var(--hero-gradient-from),var(--hero-gradient-via))",
               }}
             >
               <span className="text-white font-semibold">N</span>
             </div>
-            <span className="text-xl font-semibold">Nexus Board</span>
-          </motion.div>
-
-          {/* Nav Links */}
-          <div className="hidden lg:flex items-center gap-1">
-            {(["products", "solutions", "resources"] as const).map(
-              (item, idx) => (
-                <div
-                  key={item}
-                  className="relative"
-                  onMouseEnter={() => setActiveDropdown(item)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <motion.button
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-accent transition-colors capitalize"
-                  >
-                    {item}
-                    <ChevronDown
-                      className={`size-4 transition-transform ${
-                        activeDropdown === item ? "rotate-180" : ""
-                      }`}
-                    />
-                  </motion.button>
-
-                  <AnimatePresence>
-                    {activeDropdown === item && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                        className="absolute top-full left-0 mt-2 w-72 bg-card border border-border rounded-xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-2">
-                          {dropdownContent[item].map((subItem, subIdx) => (
-                            <motion.button
-                              key={subItem.name}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: subIdx * 0.05 }}
-                              className="w-full text-left p-3 rounded-lg hover:bg-accent transition-colors group"
-                            >
-                              <div className="font-medium mb-0.5 group-hover:text-primary transition-colors">
-                                {subItem.name}
-                              </div>
-                              <div className="text-sm text-muted-foreground">
-                                {subItem.description}
-                              </div>
-                            </motion.button>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              )
-            )}
-
-            <motion.button
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="px-4 py-2 rounded-lg hover:bg-accent transition-colors"
-            >
-              Pricing
-            </motion.button>
+            <span className="text-lg font-semibold text-foreground">
+              Nexus Board
+            </span>
           </div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="flex items-center gap-3"
-          >
-            <Button
-              variant="ghost"
-              onClick={onSignIn}
-              className="hidden sm:flex"
-            >
-              Sign in
-            </Button>
-            <Button onClick={onGetStarted} className="hidden sm:flex">
-              Get started
-            </Button>
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-1">
+            {sections.map((key, idx) => (
+              <div
+                key={key}
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown(key)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button
+                  className="flex items-center gap-1 px-3 py-2 rounded-md hover:bg-accent transition-colors text-sm font-medium capitalize"
+                  aria-haspopup="true"
+                  aria-expanded={activeDropdown === key}
+                >
+                  {key}
+                  <ChevronDown
+                    className={[
+                      "size-4 transition-transform",
+                      activeDropdown === key ? "rotate-180" : "",
+                    ].join(" ")}
+                    aria-hidden="true"
+                  />
+                </button>
 
-            {/* Mobile Menu */}
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="lg:hidden">
-                  <Menu className="size-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <div className="flex flex-col gap-6 mt-8">
-                  <div className="space-y-4">
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Products
-                    </h4>
-                    {products.map((item) => (
-                      <button
-                        key={item.name}
-                        className="block w-full text-left"
-                      >
-                        <div className="font-medium">{item.name}</div>
-                        <p className="text-sm text-muted-foreground">
-                          {item.description}
-                        </p>
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Solutions
-                    </h4>
-                    {solutions.map((item) => (
-                      <button
-                        key={item.name}
-                        className="block w-full text-left"
-                      >
-                        <div className="font-medium">{item.name}</div>
-                        <p className="text-sm text-muted-foreground">
-                          {item.description}
-                        </p>
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-col gap-3 pt-6 border-t">
-                    <Button
-                      variant="outline"
-                      onClick={onSignIn}
-                      className="w-full"
+                <AnimatePresence>
+                  {activeDropdown === key && (
+                    <motion.div
+                      variants={dropdownVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      transition={baseTransition}
+                      className="absolute top-[110%] left-0 w-[300px] rounded-xl border border-border/70 bg-card shadow-2xl"
+                      role="menu"
                     >
-                      Sign in
-                    </Button>
-                    <Button onClick={onGetStarted} className="w-full">
-                      Get started
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </motion.div>
+                      <div className="p-2">
+                        {NAV_SECTIONS[key].map((item, i) => (
+                          <motion.button
+                            key={item.name}
+                            initial={{ opacity: 0, x: -8 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                              ...baseTransition,
+                              delay: reduceMotion ? 0 : i * 0.03,
+                            }}
+                            className="w-full text-left p-3 rounded-lg hover:bg-accent/60 transition-colors"
+                            role="menuitem"
+                          >
+                            <div className="font-medium text-foreground group-hover:text-primary">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-muted-foreground mt-0.5">
+                              {item.description}
+                            </div>
+                          </motion.button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+
+            <button className="px-3 py-2 rounded-md hover:bg-accent transition-colors text-sm font-medium">
+              Pricing
+            </button>
+          </div>
+
+          {/* Right controls */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() =>
+                setTheme(
+                  theme === "light"
+                    ? "dark"
+                    : theme === "dark"
+                    ? "system"
+                    : "light"
+                )
+              }
+              className="p-2 rounded-md hover:bg-accent transition"
+              title="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Moon className="size-5 text-foreground" />
+              ) : theme === "light" ? (
+                <Sun className="size-5 text-foreground" />
+              ) : (
+                <span className="text-xs text-muted-foreground">Auto</span>
+              )}
+            </button>
+            {/* Desktop CTAs */}
+            <div className="hidden lg:flex items-center gap-2">
+              <Button variant="ghost" onClick={onSignIn}>
+                Sign in
+              </Button>
+              <Button onClick={onGetStarted}>Get started</Button>
+            </div>
+
+            {/* Mobile trigger */}
+            <button
+              className="lg:hidden inline-flex items-center justify-center size-10 rounded-md hover:bg-accent transition"
+              aria-label="Open menu"
+              onClick={() => setMobileOpen(true)}
+            >
+              <Menu className="size-5" />
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Drawer: fade + scale */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* overlay */}
+            <motion.button
+              key="overlay"
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm"
+              variants={overlayVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={baseTransition}
+            />
+            {/* panel */}
+            <motion.div
+              key="panel"
+              variants={panelVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{
+                ...baseTransition,
+                duration: reduceMotion ? 0 : 0.22,
+              }}
+              className="fixed inset-x-4 top-20 z-60 mx-auto w-[min(92vw,360px)] rounded-2xl border border-border/70 bg-card shadow-2xl"
+              role="dialog"
+              aria-modal="true"
+            >
+              <div className="flex items-center justify-between p-4 border-b border-border/60">
+                <div className="font-semibold text-foreground">Menu</div>
+                <button
+                  className="inline-flex items-center justify-center size-9 rounded-md hover:bg-accent transition"
+                  aria-label="Close menu"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <X className="size-5" />
+                </button>
+              </div>
+
+              <div className="p-4 space-y-6">
+                <MobileSection title="Products" items={NAV_SECTIONS.products} />
+                <MobileSection
+                  title="Solutions"
+                  items={NAV_SECTIONS.solutions}
+                />
+
+                <div className="flex flex-col gap-3 pt-4 border-t border-border/60">
+                  <Button
+                    variant="outline"
+                    onClick={() => {
+                      setMobileOpen(false);
+                      onSignIn();
+                    }}
+                    className="w-full"
+                  >
+                    Sign in
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      setMobileOpen(false);
+                      onGetStarted();
+                    }}
+                    className="w-full"
+                  >
+                    Get started
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
+  );
+}
+
+/* ------------------------- Small Mobile Section ------------------------- */
+function MobileSection({
+  title,
+  items,
+}: {
+  title: string;
+  items: readonly { name: string; description: string }[];
+}) {
+  return (
+    <div className="space-y-3">
+      <h4 className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+        {title}
+      </h4>
+      <ul className="space-y-2">
+        {items.map((it) => (
+          <li key={it.name}>
+            <button className="w-full text-left p-3 rounded-lg hover:bg-accent transition-colors">
+              <div className="font-medium text-sm">{it.name}</div>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                {it.description}
+              </p>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "7886821792809771525apps/web/vite.config.ts": {
+  "10048042964762023796apps/web/vite.config.ts": {
     "targets": {
       "build": {
         "command": "vite build",

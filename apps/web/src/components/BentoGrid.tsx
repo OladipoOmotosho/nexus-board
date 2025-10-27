@@ -15,47 +15,44 @@ export function BentoGrid() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  // List of features to display in the bento grid. Gradients have been removed
+  // in favor of a more neutral background palette. Each feature defines a title,
+  // description, icon and optional span to control its size in the grid.
   const features = [
     {
       title: "Real-time Collaboration",
       description: "Work together seamlessly with your team in real-time",
       icon: Users,
-      gradient: "from-blue-500/10 to-cyan-500/10",
       span: "md:col-span-2",
     },
     {
       title: "Lightning Fast",
       description: "Optimized for speed and performance",
       icon: Zap,
-      gradient: "from-yellow-500/10 to-orange-500/10",
       span: "md:col-span-1",
     },
     {
       title: "Advanced Analytics",
       description: "Gain insights with powerful analytics",
       icon: BarChart3,
-      gradient: "from-purple-500/10 to-pink-500/10",
       span: "md:col-span-1",
     },
     {
       title: "Enterprise Security",
       description: "Bank-level encryption and compliance",
       icon: Shield,
-      gradient: "from-green-500/10 to-emerald-500/10",
       span: "md:col-span-2",
     },
     {
       title: "Global Access",
       description: "Access from anywhere, on any device",
       icon: Globe,
-      gradient: "from-indigo-500/10 to-blue-500/10",
       span: "md:col-span-2",
     },
     {
       title: "Auto-save Everything",
       description: "Never lose your work with automatic saving",
       icon: CheckCircle2,
-      gradient: "from-teal-500/10 to-cyan-500/10",
       span: "md:col-span-1",
     },
   ];
@@ -89,13 +86,15 @@ export function BentoGrid() {
               className={feature.span}
             >
               <Card
-                className={`p-8 h-full bg-gradient-to-br ${feature.gradient} border-border/50 hover:border-primary/20 transition-all group cursor-pointer`}
+                className={
+                  `p-8 h-full bg-muted/20 border border-border/50 hover:border-primary/20 transition-all group cursor-pointer`
+                }
               >
-                <div className="size-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="size-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   <feature.icon className="size-6 text-primary" />
                 </div>
-                <h3 className="mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </Card>
             </motion.div>
           ))}
