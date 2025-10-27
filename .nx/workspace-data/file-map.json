@@ -100,7 +100,7 @@
       },
       {
         "file": "pnpm-lock.yaml",
-        "hash": "5646205797146438413"
+        "hash": "2103771454342343381"
       },
       {
         "file": "pnpm-workspace.yaml",
@@ -120,12 +120,6 @@
       }
     ],
     "projectFileMap": {
-      "api": [
-        {
-          "file": "apps/api/project.json",
-          "hash": "11042671037508349635"
-        }
-      ],
       "web": [
         {
           "file": "apps/web/index.html",
@@ -133,11 +127,12 @@
         },
         {
           "file": "apps/web/package.json",
-          "hash": "12955788305391636683",
+          "hash": "15870761134957568177",
           "deps": [
             "npm:@types/node",
             "npm:@vitejs/plugin-react-swc",
             "npm:vite@6.3.5",
+            "npm:@swc/core@1.13.5",
             "npm:@radix-ui/react-accordion",
             "npm:@radix-ui/react-alert-dialog",
             "npm:@radix-ui/react-aspect-ratio",
@@ -176,6 +171,7 @@
             "npm:react-dom@18.3.1",
             "npm:react-hook-form",
             "npm:react-resizable-panels",
+            "npm:react-router-dom",
             "npm:recharts",
             "npm:sonner",
             "npm:tailwind-merge",
@@ -188,8 +184,9 @@
         },
         {
           "file": "apps/web/src/App.tsx",
-          "hash": "17532611268059764589",
+          "hash": "10208643201528258483",
           "deps": [
+            "npm:react-router-dom",
             "npm:react@18.3.1",
             "npm:sonner"
           ]
@@ -197,6 +194,13 @@
         {
           "file": "apps/web/src/Attributions.md",
           "hash": "5750971355051508212"
+        },
+        {
+          "file": "apps/web/src/ThemeProvider.tsx",
+          "hash": "17945907008807568089",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
         },
         {
           "file": "apps/web/src/app/app.module.css",
@@ -224,7 +228,7 @@
         },
         {
           "file": "apps/web/src/components/AppSidebar.tsx",
-          "hash": "2704275046753119575",
+          "hash": "13725171214526588725",
           "deps": [
             "npm:lucide-react"
           ]
@@ -324,7 +328,7 @@
         },
         {
           "file": "apps/web/src/components/Navbar.tsx",
-          "hash": "14450709677289207532",
+          "hash": "8290372453302175836",
           "deps": [
             "npm:react@18.3.1",
             "npm:lucide-react"
@@ -811,7 +815,7 @@
         },
         {
           "file": "apps/web/src/hooks/useTheme.ts",
-          "hash": "1971528463003749064",
+          "hash": "12514168290202424119",
           "deps": [
             "npm:react@18.3.1"
           ]
@@ -822,8 +826,9 @@
         },
         {
           "file": "apps/web/src/main.tsx",
-          "hash": "8175982933107999308",
+          "hash": "4534821648014200844",
           "deps": [
+            "npm:react-router-dom",
             "npm:react-dom@18.3.1"
           ]
         },
@@ -833,7 +838,7 @@
         },
         {
           "file": "apps/web/src/styles/index.css",
-          "hash": "13186854659003999461"
+          "hash": "5857246657275585874"
         },
         {
           "file": "apps/web/tailwind.config.js",
@@ -856,8 +861,14 @@
             "npm:vite-tsconfig-paths"
           ]
         }
+      ],
+      "api": [
+        {
+          "file": "apps/api/project.json",
+          "hash": "11042671037508349635"
+        }
       ]
     }
   },
-  "externalNodesHash": "16564808267276799886"
+  "externalNodesHash": "903306528029669565"
 }

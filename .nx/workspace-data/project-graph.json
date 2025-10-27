@@ -5266,13 +5266,22 @@
         "hash": "sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ=="
       }
     },
-    "npm:cookie": {
+    "npm:cookie@0.7.1": {
       "type": "npm",
-      "name": "npm:cookie",
+      "name": "npm:cookie@0.7.1",
       "data": {
         "version": "0.7.1",
         "packageName": "cookie",
         "hash": "sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w=="
+      }
+    },
+    "npm:cookie@1.0.2": {
+      "type": "npm",
+      "name": "npm:cookie@1.0.2",
+      "data": {
+        "version": "1.0.2",
+        "packageName": "cookie",
+        "hash": "sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA=="
       }
     },
     "npm:cookies": {
@@ -9181,6 +9190,24 @@
         "hash": "sha512-z77+X08YDIrgAes4jl8xhnUu1LNIRp4+E7cv4xHmLOxxUPO/ML7PSrE813b90vj7xvQ1lcf7g2uA9GeMZonjhQ=="
       }
     },
+    "npm:react-router-dom": {
+      "type": "npm",
+      "name": "npm:react-router-dom",
+      "data": {
+        "version": "7.9.4",
+        "packageName": "react-router-dom",
+        "hash": "sha512-f30P6bIkmYvnHHa5Gcu65deIXoA2+r3Eb6PJIAddvsT9aGlchMatJ51GgpU470aSqRRbFX22T70yQNUGuW3DfA=="
+      }
+    },
+    "npm:react-router": {
+      "type": "npm",
+      "name": "npm:react-router",
+      "data": {
+        "version": "7.9.4",
+        "packageName": "react-router",
+        "hash": "sha512-SD3G8HKviFHg9xj7dNODUKDFgpG4xqD5nhyd0mYoB5iISepuZAvzSr8ywxgxKJ52yRzf/HWtVHc9AWwoTbljvA=="
+      }
+    },
     "npm:react-smooth": {
       "type": "npm",
       "name": "npm:react-smooth",
@@ -9620,6 +9647,15 @@
         "version": "1.16.2",
         "packageName": "serve-static",
         "hash": "sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw=="
+      }
+    },
+    "npm:set-cookie-parser": {
+      "type": "npm",
+      "name": "npm:set-cookie-parser",
+      "data": {
+        "version": "2.7.1",
+        "packageName": "set-cookie-parser",
+        "hash": "sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ=="
       }
     },
     "npm:setprototypeof": {
@@ -10777,6 +10813,11 @@
       },
       {
         "source": "web",
+        "target": "npm:@swc/core@1.13.5",
+        "type": "static"
+      },
+      {
+        "source": "web",
         "target": "npm:@radix-ui/react-accordion",
         "type": "static"
       },
@@ -10963,6 +11004,11 @@
       {
         "source": "web",
         "target": "npm:react-resizable-panels",
+        "type": "static"
+      },
+      {
+        "source": "web",
+        "target": "npm:react-router-dom",
         "type": "static"
       },
       {
@@ -20655,7 +20701,7 @@
       },
       {
         "source": "npm:express",
-        "target": "npm:cookie",
+        "target": "npm:cookie@0.7.1",
         "type": "static"
       },
       {
@@ -23544,6 +23590,45 @@
         "type": "static"
       }
     ],
+    "npm:react-router-dom": [
+      {
+        "source": "npm:react-router-dom",
+        "target": "npm:react@18.3.1",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-router-dom",
+        "target": "npm:react-dom@18.3.1",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-router-dom",
+        "target": "npm:react-router",
+        "type": "static"
+      }
+    ],
+    "npm:react-router": [
+      {
+        "source": "npm:react-router",
+        "target": "npm:cookie@1.0.2",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-router",
+        "target": "npm:react@18.3.1",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-router",
+        "target": "npm:set-cookie-parser",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-router",
+        "target": "npm:react-dom@18.3.1",
+        "type": "static"
+      }
+    ],
     "npm:react-smooth": [
       {
         "source": "npm:react-smooth",
@@ -25509,5 +25594,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1761550248160
+  "computedAt": 1761553173261
 }

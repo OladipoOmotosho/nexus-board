@@ -42,7 +42,7 @@ export function Navbar({ onThemeToggle, isDark }: NavbarProps) {
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-6 flex-1">
             <div className="flex items-center gap-2">
-              <div className="size-8 rounded-lg bg-gradient-to-br from-hero-gradient-from to-hero-gradient-via flex items-center justify-center">
+              <div className="size-8 rounded-lg bg-linear-to-br from-hero-gradient-from to-hero-gradient-via flex items-center justify-center">
                 <span className="text-white font-semibold">N</span>
               </div>
               <span className="font-semibold">Nexus Board</span>
