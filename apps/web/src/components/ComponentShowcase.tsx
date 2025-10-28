@@ -1,14 +1,21 @@
-import React from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Badge } from './ui/badge';
-import { Card } from './ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { Alert, AlertDescription, AlertTitle } from './ui/alert';
-import { Progress } from './ui/progress';
-import { Switch } from './ui/switch';
-import { Slider } from './ui/slider';
-import { CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { Button } from "./reusableComponents/button";
+import { Input } from "./reusableComponents/input";
+import { Badge } from "./reusableComponents/badge";
+import { Card } from "./reusableComponents/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "./reusableComponents/avatar";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "./reusableComponents/alert";
+import { Progress } from "./reusableComponents/progress";
+import { Switch } from "./reusableComponents/switch";
+import { Slider } from "./reusableComponents/slider";
+import { CheckCircle2, AlertCircle, Info } from "lucide-react";
 
 /**
  * Component Showcase - displays all design system components
@@ -216,17 +223,24 @@ export function ComponentShowcase() {
             <code className="text-xs text-muted-foreground">--border</code>
           </div>
           <div>
-            <div 
-              className="h-20 rounded-lg mb-2" 
-              style={{ background: 'linear-gradient(135deg, var(--hero-gradient-from), var(--hero-gradient-via), var(--hero-gradient-to))' }}
+            <div
+              className="h-20 rounded-lg mb-2"
+              style={{
+                background:
+                  "linear-gradient(135deg, var(--hero-gradient-from), var(--hero-gradient-via), var(--hero-gradient-to))",
+              }}
             />
             <p className="text-sm">Hero Gradient</p>
-            <code className="text-xs text-muted-foreground">--hero-gradient-*</code>
+            <code className="text-xs text-muted-foreground">
+              --hero-gradient-*
+            </code>
           </div>
           <div>
             <div className="h-20 rounded-lg bg-glass-light dark:bg-glass-dark backdrop-blur-xl border border-border mb-2" />
             <p className="text-sm">Glass</p>
-            <code className="text-xs text-muted-foreground">--glass-light/dark</code>
+            <code className="text-xs text-muted-foreground">
+              --glass-light/dark
+            </code>
           </div>
         </div>
       </section>
@@ -236,22 +250,34 @@ export function ComponentShowcase() {
         <h2>Border Radius Tokens</h2>
         <div className="flex gap-4">
           <div>
-            <div className="h-20 w-20 bg-primary mb-2" style={{ borderRadius: 'var(--radius-sm)' }} />
+            <div
+              className="h-20 w-20 bg-primary mb-2"
+              style={{ borderRadius: "var(--radius-sm)" }}
+            />
             <p className="text-sm">Small</p>
             <code className="text-xs text-muted-foreground">--radius-sm</code>
           </div>
           <div>
-            <div className="h-20 w-20 bg-primary mb-2" style={{ borderRadius: 'var(--radius-md)' }} />
+            <div
+              className="h-20 w-20 bg-primary mb-2"
+              style={{ borderRadius: "var(--radius-md)" }}
+            />
             <p className="text-sm">Medium</p>
             <code className="text-xs text-muted-foreground">--radius-md</code>
           </div>
           <div>
-            <div className="h-20 w-20 bg-primary mb-2" style={{ borderRadius: 'var(--radius-lg)' }} />
+            <div
+              className="h-20 w-20 bg-primary mb-2"
+              style={{ borderRadius: "var(--radius-lg)" }}
+            />
             <p className="text-sm">Large</p>
             <code className="text-xs text-muted-foreground">--radius-lg</code>
           </div>
           <div>
-            <div className="h-20 w-20 bg-primary mb-2" style={{ borderRadius: 'var(--radius-xl)' }} />
+            <div
+              className="h-20 w-20 bg-primary mb-2"
+              style={{ borderRadius: "var(--radius-xl)" }}
+            />
             <p className="text-sm">XLarge</p>
             <code className="text-xs text-muted-foreground">--radius-xl</code>
           </div>

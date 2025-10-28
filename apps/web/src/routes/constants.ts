@@ -1,0 +1,57 @@
+/**
+ * Route path constants to avoid magic strings throughout the app.
+ * Use these instead of hardcoded paths in navigation, links, and redirects.
+ */
+
+export const ROUTE_PATHS = {
+  // Public routes
+  HOME: "/",
+  SIGN_IN: "/sign_in",
+  SIGN_UP: "/sign_up",
+
+  // Protected routes (dashboard layout)
+  DASHBOARD: "/dashboard",
+  TASKS: "/dashboard/tasks",
+  CALENDAR: "/dashboard/calendar",
+  ANALYTICS: "/dashboard/analytics",
+  TEAM: "/dashboard/team",
+  SETTINGS: "/dashboard/settings",
+  PROJECT: (id: string) => `/dashboard/project/${id}`,
+
+  // Admin routes (future)
+  ADMIN: "/admin",
+  ADMIN_USERS: "/admin/users",
+  ADMIN_SETTINGS: "/admin/settings",
+
+  // Catch-all / Not Found
+  NOT_FOUND: "*",
+} as const;
+
+/**
+ * Convenience function to get all public routes
+ */
+export const getPublicRoutes = () =>
+  [ROUTE_PATHS.HOME, ROUTE_PATHS.SIGN_IN, ROUTE_PATHS.SIGN_UP] as const;
+
+/**
+ * Convenience function to get all protected routes
+ */
+export const getProtectedRoutes = () =>
+  [
+    ROUTE_PATHS.DASHBOARD,
+    ROUTE_PATHS.TASKS,
+    ROUTE_PATHS.CALENDAR,
+    ROUTE_PATHS.ANALYTICS,
+    ROUTE_PATHS.TEAM,
+    ROUTE_PATHS.SETTINGS,
+  ] as const;
+
+/**
+ * Convenience function to get all admin routes
+ */
+export const getAdminRoutes = () =>
+  [
+    ROUTE_PATHS.ADMIN,
+    ROUTE_PATHS.ADMIN_USERS,
+    ROUTE_PATHS.ADMIN_SETTINGS,
+  ] as const;

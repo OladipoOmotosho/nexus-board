@@ -1,21 +1,75 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { LandingPage } from "./components/LandingPage";
-import { SignIn } from "./components/SignIn";
-import { SignUp } from "./components/SignUp";
-import { Navbar } from "./components/Navbar";
-import { AppSidebar } from "./components/AppSidebar";
-import { Dashboard } from "./components/Dashboard";
-import { ProjectHeader } from "./components/ProjectHeader";
-import { TaskBoard, Task } from "./components/TaskBoard";
-import { NewTaskModal } from "./components/NewTaskModal";
+import { Routes, Route } from "react-router-dom";
+import { useState, useEffect, Suspense } from "react";
 import { Toaster, toast } from "sonner";
+import { DashboardLayout } from "./layouts/DashboardLayout";
+import {
+  PUBLIC_ROUTES,
+  PROTECTED_ROUTES,
+  ADMIN_ROUTES,
+} from "./routes/routes.config";
+import { ROUTE_PATHS } from "./routes/constants";
+import { ProtectedRoute } from "./routes/guards";
+import { AppRoute, UserRole } from "./routes/types";
+import { NewTaskModal } from "./pages/tasks/NewTaskModal";
+
+// Loading fallback component
+const RouteLoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4" />
+      <p className="text-muted-foreground">Loading...</p>
+    </div>
+  </div>
+);
+
+type TaskStatus = "todo" | "in-progress" | "done";
+
+/**
+ * Recursively render routes from route config.
+ * Handles route protection and suspense boundaries.
+ */
+const renderRoutes = (routes: AppRoute[]): React.ReactNode[] => {
+  return routes.map((route, idx) => {
+    const element = route.Component ? (
+      <Suspense fallback={<RouteLoadingFallback />}>
+        <route.Component />
+      </Suspense>
+    ) : null;
+
+    // Wrap protected routes with ProtectedRoute guard
+    const wrappedElement =
+      route.requiresAuth && element ? (
+        <ProtectedRoute allowedRoles={route.allowedRoles}>
+          {element}
+        </ProtectedRoute>
+      ) : (
+        element
+      );
+
+    // Handle nested routes (children)
+    if (route.children && route.children.length > 0) {
+      return (
+        <Route key={idx} path={route.path} element={wrappedElement}>
+          {renderRoutes(route.children)}
+        </Route>
+      );
+    }
+
+    return (
+      <Route
+        key={idx}
+        path={route.path}
+        index={route.index}
+        element={wrappedElement}
+      />
+    );
+  });
+};
 
 function App() {
   const [isDark, setIsDark] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [newTaskStatus, setNewTaskStatus] = useState<Task["status"]>("todo");
-  const navigate = useNavigate();
+  const [newTaskStatus] = useState<TaskStatus>("todo");
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
@@ -27,41 +81,53 @@ function App() {
     <div className="min-h-screen bg-background">
       <Routes>
         {/* Public routes */}
-        <Route
-          path="/"
-          element={
-            <LandingPage
-              onGetStarted={() => navigate("/signup")}
-              onSignIn={() => navigate("/signin")}
-            />
-          }
-        />
-        <Route
-          path="/signin"
-          element={<SignIn onSwitchToSignUp={() => navigate("/signup")} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignUp onSwitchToSignIn={() => navigate("/signin")} />}
-        />
+        {renderRoutes(PUBLIC_ROUTES)}
 
-        {/* Protected dashboard routes */}
+        {/* Protected dashboard routes with layout */}
         <Route
-          path="/dashboard"
+          path={ROUTE_PATHS.DASHBOARD}
           element={
-            <>
-              <Navbar onThemeToggle={handleThemeToggle} isDark={isDark} />
-              <div className="flex">
-                <AppSidebar />
-                <main className="flex-1 min-h-[calc(100vh-73px)]">
-                  <Dashboard />
-                </main>
+            <ProtectedRoute
+              allowedRoles={[UserRole.USER, UserRole.ADMIN, UserRole.OWNER]}
+            >
+              <Suspense fallback={<RouteLoadingFallback />}>
+                <DashboardLayout
+                  onThemeToggle={handleThemeToggle}
+                  isDark={isDark}
+                />
+              </Suspense>
+            </ProtectedRoute>
+          }
+        >
+          {/* Nested dashboard routes */}
+          {PROTECTED_ROUTES[0]?.children &&
+            renderRoutes(PROTECTED_ROUTES[0].children)}
+        </Route>
+
+        {/* Admin routes */}
+        {renderRoutes(ADMIN_ROUTES)}
+
+        {/* Catch-all 404 - must be last */}
+        <Route
+          path={ROUTE_PATHS.NOT_FOUND}
+          element={
+            <div className="flex items-center justify-center min-h-screen">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold mb-4">404</h1>
+                <p className="text-muted-foreground mb-8">Page not found</p>
+                <a
+                  href={ROUTE_PATHS.HOME}
+                  className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90"
+                >
+                  Go Home
+                </a>
               </div>
-            </>
+            </div>
           }
         />
       </Routes>
 
+      {/* Global modals and toasters */}
       <NewTaskModal
         open={modalOpen}
         onOpenChange={setModalOpen}
