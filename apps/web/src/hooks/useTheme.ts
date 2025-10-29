@@ -3,6 +3,55 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark" | "system";
 
 /**
+ * useTheme
+ *
+ * React hook that manages a user's theme preference and synchronizes it with
+ * the document root and other browser contexts (e.g. other tabs).
+ *
+ * Behavior:
+ * - Initializes theme from localStorage under the key "theme", falling back to
+ *   "system" when no value is present or when running in a non-browser (SSR)
+ *   environment.
+ * - Applies the effective theme to document.documentElement by adding either
+ *   the "light" or "dark" class. If the stored preference is "system", the
+ *   effective theme follows the OS preference determined via
+ *   window.matchMedia("(prefers-color-scheme: dark)").
+ * - Subscribes to:
+ *   - the system color-scheme change event (matchMedia change) to update the
+ *     applied theme when the OS preference changes (only when the preference
+ *     is "system"),
+ *   - the window "storage" event to react to theme changes made in other
+ *     tabs and synchronize the local state and document class.
+ * - Cleans up all event listeners on unmount.
+ * - Exposes a setter which persists the chosen preference to localStorage. The
+ *   write is wrapped in try/catch to tolerate privacy modes or browsers that
+ *   block storage access.
+ *
+ * Notes:
+ * - This hook is safe to call during server-side rendering: it will return
+ *   "system" as the initial value when window is undefined and will not access
+ *   DOM APIs until running in the browser.
+ * - The hook returns a minimal API: { theme, setTheme } where `theme` is the
+ *   stored preference (for example "light" | "dark" | "system") and `setTheme`
+ *   persists and applies a new preference.
+ *
+ * @remarks
+ * - Intended to be used inside React function components.
+ * - The hook mutates the document.documentElement classes directly; ensure your
+ *   CSS reads these classes (e.g. .light and .dark) to apply theming.
+ *
+ * @returns An object with:
+ * - `theme`: the current theme preference (e.g. "light" | "dark" | "system").
+ * - `setTheme`: function to update the preference and persist it to localStorage.
+ *
+ * @example
+ * // In a React component:
+ * // const { theme, setTheme } = useTheme();
+ * // setTheme("dark");
+ *
+ */
+
+/**
  * React hook to manage theme preference with:
  * - System theme detection and auto-sync
  * - LocalStorage persistence

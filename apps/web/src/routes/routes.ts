@@ -11,6 +11,7 @@ function route(name: string, path: string): RouteConfig {
 
 export default [
   route("Dashboard", "../pages/dashboard/Dashboard.tsx"),
+  route("Landing", "../pages/landing/LandingPage.tsx"),
   route("Tasks", "../pages/tasks/TaskBoard.tsx"),
   route("Calendar", "../pages/calendar/CalendarView.tsx"),
   route("Analytics", "../pages/analytics/Analytics.tsx"),
