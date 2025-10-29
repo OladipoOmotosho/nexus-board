@@ -1,60 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
 import { Menu, ChevronDown, X, Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
-import { Button } from "../../../components/reusableComponents/button";
-import { useTheme } from "../../../hooks/useTheme";
+import { Button } from "../../../../components/reusableComponents/button";
+import { useTheme } from "../../../../hooks/useTheme";
 import { useNavigate } from "react-router-dom";
-import { LANDING_SECTIONS } from "../constants/sectionIds";
-import { useScrollToSection } from "apps/web/src/hooks/useScrollToSection";
-
-/* ------------------------- Data (memo-friendly) ------------------------- */
-const NAV_SECTIONS = {
-  products: [
-    { name: "Task Management", description: "Organize and track your work" },
-    { name: "Team Collaboration", description: "Work together seamlessly" },
-    { name: "Project Boards", description: "Visualize your workflow" },
-    { name: "Analytics", description: "Insights and reporting" },
-  ],
-  solutions: [
-    { name: "For Startups", description: "Scale your team efficiently" },
-    { name: "For Enterprise", description: "Enterprise-grade security" },
-    { name: "For Remote Teams", description: "Work from anywhere" },
-    { name: "For Agencies", description: "Manage client projects" },
-  ],
-  resources: [
-    { name: "Documentation", description: "Learn how to use Nexus" },
-    { name: "Blog", description: "Latest updates and insights" },
-    { name: "Community", description: "Connect with other users" },
-    { name: "Support", description: "Get help when you need it" },
-  ],
-} as const;
-
-type SectionKey = keyof typeof NAV_SECTIONS;
-
-/* ------------------------- Motion Variants ------------------------- */
-const fadeDown = {
-  initial: { opacity: 0, y: -8 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -8 },
-};
-
-const dropdownVariants = {
-  initial: { opacity: 0, y: 8, scale: 0.98 },
-  animate: { opacity: 1, y: 0, scale: 1 },
-  exit: { opacity: 0, y: 8, scale: 0.98 },
-};
-
-const overlayVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
-const panelVariants = {
-  initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.95 },
-};
+import { LANDING_SECTIONS } from "../../constants/sectionIds";
+import { useScrollToSection } from "../../../../hooks/useScrollToSection";
+import { NAV_SECTIONS, SectionKey } from "./data/navData";
+import {
+  fadeDown,
+  dropdownVariants,
+  overlayVariants,
+  panelVariants,
+} from "./constants/navAnimations";
+import { MobileSection } from "./MobileSection";
 
 /* ------------------------- Component ------------------------- */
 export function LandingNavbar() {
@@ -93,7 +52,7 @@ export function LandingNavbar() {
 
   const baseTransition = {
     duration: reduceMotion ? 0 : 0.18,
-    ease: "easeInOut" as const, // ✅ valid easing type
+    ease: "easeInOut" as const,
   };
   const handlePricingClick = () => {
     setMobileOpen(false);
@@ -347,34 +306,5 @@ export function LandingNavbar() {
         )}
       </AnimatePresence>
     </motion.nav>
-  );
-}
-
-/* ------------------------- Small Mobile Section ------------------------- */
-function MobileSection({
-  title,
-  items,
-}: {
-  title: string;
-  items: readonly { name: string; description: string }[];
-}) {
-  return (
-    <div className="space-y-3">
-      <h4 className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-        {title}
-      </h4>
-      <ul className="space-y-2">
-        {items.map((it) => (
-          <li key={it.name}>
-            <button className="w-full text-left p-3 rounded-lg hover:bg-accent transition-colors">
-              <div className="font-medium text-sm">{it.name}</div>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                {it.description}
-              </p>
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }

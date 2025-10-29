@@ -3,7 +3,7 @@ import { ScrollProgress } from "./components/ScrollProgress";
 import { Button } from "../../components/reusableComponents/button";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import { LandingNavbar } from "./components/LandingNavbar";
+import { LandingNavbar } from "./components/nav/LandingNavbar";
 import { BentoGrid } from "./components/BentoGrid";
 import { HowItWorks } from "./components/HowItWorks";
 import { IntegrationsSection } from "./components/IntegrationSection";
