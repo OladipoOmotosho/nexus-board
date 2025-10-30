@@ -17,8 +17,8 @@ export interface Task {
 }
 
 interface TaskBoardProps {
-  tasks: Task[];
-  onTaskMove: (taskId: string, newStatus: Task["status"]) => void;
+  tasks?: Task[];
+  onTaskMove?: (taskId: string, newStatus: Task["status"]) => void;
   onAddTask?: (status: Task["status"]) => void;
 }
 
@@ -28,8 +28,102 @@ const columns: Array<{ id: Task["status"]; title: string; color: string }> = [
   { id: "done", title: "Done", color: "bg-green-500/10" },
 ];
 
-export function TaskBoard({ tasks, onTaskMove, onAddTask }: TaskBoardProps) {
+// Sample initial tasks
+const INITIAL_TASKS: Task[] = [
+  {
+    id: "1",
+    title: "Design landing page",
+    status: "todo",
+    priority: "high",
+    dueDate: "2025-11-15",
+    assignee: {
+      name: "Sarah Chen",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
+    },
+    labels: ["high"],
+  },
+  {
+    id: "2",
+    title: "Set up authentication",
+    status: "in-progress",
+    priority: "high",
+    dueDate: "2025-11-10",
+    assignee: {
+      name: "Alex Johnson",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=alex",
+    },
+    labels: ["high"],
+  },
+  {
+    id: "3",
+    title: "Write API documentation",
+    status: "done",
+    priority: "medium",
+    assignee: {
+      name: "Jordan Lee",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=jordan",
+    },
+    labels: ["medium"],
+  },
+  {
+    id: "4",
+    title: "Fix responsive design issues",
+    status: "in-progress",
+    priority: "medium",
+    dueDate: "2025-11-12",
+    assignee: {
+      name: "Casey Kim",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=casey",
+    },
+    labels: ["medium"],
+  },
+  {
+    id: "5",
+    title: "Database optimization",
+    status: "todo",
+    priority: "low",
+    dueDate: "2025-11-20",
+    assignee: {
+      name: "Morgan Davis",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=morgan",
+    },
+    labels: ["low"],
+  },
+];
+
+export function TaskBoard({
+  tasks: externalTasks,
+  onTaskMove,
+  onAddTask,
+}: TaskBoardProps) {
+  const [internalTasks, setInternalTasks] = useState<Task[]>(INITIAL_TASKS);
   const [draggedTask, setDraggedTask] = useState<string | null>(null);
+
+  // Use external tasks if provided, otherwise use internal state
+  const tasks = externalTasks ?? internalTasks;
+
+  // Use external handler if provided, otherwise use internal state handler
+  const handleTaskMove = (taskId: string, newStatus: Task["status"]) => {
+    if (onTaskMove) {
+      onTaskMove(taskId, newStatus);
+    } else {
+      setInternalTasks((prev) =>
+        prev.map((task) =>
+          task.id === taskId ? { ...task, status: newStatus } : task
+        )
+      );
+    }
+  };
+
+  // Use external handler if provided, otherwise use internal modal handler
+  const handleAddTask = (status: Task["status"]) => {
+    if (onAddTask) {
+      onAddTask(status);
+    } else {
+      // TODO: Open modal for creating new task
+      console.log(`Add task to ${status} column`);
+    }
+  };
 
   const handleDragStart = (e: React.DragEvent, taskId: string) => {
     setDraggedTask(taskId);
@@ -48,7 +142,7 @@ export function TaskBoard({ tasks, onTaskMove, onAddTask }: TaskBoardProps) {
   const handleDrop = (e: React.DragEvent, status: Task["status"]) => {
     e.preventDefault();
     if (draggedTask) {
-      onTaskMove(draggedTask, status);
+      handleTaskMove(draggedTask, status);
     }
   };
 
@@ -76,7 +170,7 @@ export function TaskBoard({ tasks, onTaskMove, onAddTask }: TaskBoardProps) {
               variant="ghost"
               size="icon"
               className="size-7"
-              onClick={() => onAddTask?.(column.id)}
+              onClick={() => handleAddTask(column.id)}
             >
               <Plus className="size-4" />
             </Button>
@@ -91,7 +185,7 @@ export function TaskBoard({ tasks, onTaskMove, onAddTask }: TaskBoardProps) {
             }`}
             style={{ borderRadius: "var(--radius-lg)" }}
           >
-            {getTasksByStatus(column.id).map((task) => (
+            {getTasksByStatus(column.id)?.map((task) => (
               <TaskCard
                 key={task.id}
                 id={task.id}

@@ -10,24 +10,29 @@ import {
 import { SidebarItem } from "../components/layouts/SidebarItem";
 import { Separator } from "../components/reusableComponents/separator";
 import { NavLink } from "react-router-dom";
+import { ROUTE_PATHS } from "../routes/constants";
 
 export function AppSidebar() {
   const projects = [
-    { id: "website", name: "Website Redesign", count: 12 },
-    { id: "mobile", name: "Mobile App", count: 8 },
-    { id: "marketing", name: "Marketing Campaign", count: 5 },
+    { id: ROUTE_PATHS.PROJECT_WEBSITE, name: "Website Redesign", count: 12 },
+    { id: ROUTE_PATHS.PROJECT_MOBILE, name: "Mobile App", count: 8 },
+    {
+      id: ROUTE_PATHS.PROJECT_MARKETING,
+      name: "Marketing Campaign",
+      count: 5,
+    },
   ];
 
   const mainNav = [
-    { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-    { to: "/tasks", icon: Target, label: "My Tasks", count: 23 },
-    { to: "/calendar", icon: Calendar, label: "Calendar" },
-    { to: "/analytics", icon: BarChart3, label: "Analytics" },
+    { to: ROUTE_PATHS.DASHBOARD, icon: LayoutDashboard, label: "Dashboard" },
+    { to: ROUTE_PATHS.TASKS, icon: Target, label: "My Tasks", count: 23 },
+    { to: ROUTE_PATHS.CALENDAR, icon: Calendar, label: "Calendar" },
+    { to: ROUTE_PATHS.ANALYTICS, icon: BarChart3, label: "Analytics" },
   ];
 
   const miscNav = [
-    { to: "/team", icon: Users, label: "Team" },
-    { to: "/settings", icon: Settings, label: "Settings" },
+    { to: ROUTE_PATHS.TEAM, icon: Users, label: "Team" },
+    { to: ROUTE_PATHS.SETTINGS, icon: Settings, label: "Settings" },
   ];
 
   return (
@@ -61,11 +66,7 @@ export function AppSidebar() {
           <h4 className="text-xs text-muted-foreground px-3 mb-2">PROJECTS</h4>
           <div className="space-y-1">
             {projects.map((project) => (
-              <NavLink
-                key={project.id}
-                to={`/project-${project.id}`}
-                className="block"
-              >
+              <NavLink key={project.id} to={project.id} className="block">
                 {({ isActive }) => (
                   <SidebarItem
                     icon={FolderKanban}

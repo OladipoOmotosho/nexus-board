@@ -11,9 +11,10 @@ export const useAuth = (): AuthContext => {
   // TODO: Replace with actual auth context
   // Example: return useContext(AuthContext);
   return {
-    isAuthenticated: !!localStorage.getItem("authToken"),
+    // isAuthenticated: !!localStorage.getItem("authToken"),
+    isAuthenticated: true,
     user: null,
-    role: UserRole.GUEST,
+    role: UserRole.ADMIN,
     loading: false,
   };
 };

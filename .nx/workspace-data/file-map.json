@@ -51,12 +51,24 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "package.json",
-        "hash": "10764736375448557016"
+        "file": "ARCHITECTURE.md",
+        "hash": "11095640533682211180"
       },
       {
         "file": "ROUTING_SETUP.md",
         "hash": "11484227070800776888"
+      },
+      {
+        "file": ".gemini/settings.json",
+        "hash": "5921792102792576356"
+      },
+      {
+        "file": "postcss.config.js",
+        "hash": "7749705898111132596"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6533975126999815229"
       },
       {
         "file": ".mcp.json",
@@ -67,60 +79,48 @@
         "hash": "9587723095712302528"
       },
       {
-        "file": "pnpm-workspace.yaml",
-        "hash": "6742193365340070648"
-      },
-      {
-        "file": "ARCHITECTURE.md",
-        "hash": "11095640533682211180"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10786912969479474318"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "423351731074598405"
-      },
-      {
         "file": "CLAUDE.md",
         "hash": "5706578983456977230"
-      },
-      {
-        "file": "CONTRIBUTING.md",
-        "hash": "5073346764974627200"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "2103771454342343381"
-      },
-      {
-        "file": "AGENTS.md",
-        "hash": "5706578983456977230"
-      },
-      {
-        "file": "postcss.config.js",
-        "hash": "7749705898111132596"
       },
       {
         "file": "README.md",
         "hash": "17779297153991470282"
       },
       {
-        "file": ".gemini/settings.json",
-        "hash": "5921792102792576356"
+        "file": "pnpm-lock.yaml",
+        "hash": "2103771454342343381"
       },
       {
-        "file": ".gitignore",
-        "hash": "6533975126999815229"
+        "file": "nx.json",
+        "hash": "10786912969479474318"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "5706578983456977230"
       },
       {
         "file": "PROJECT_SUMMARY.md",
         "hash": "13796446490577057398"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
+      },
+      {
+        "file": "package.json",
+        "hash": "10764736375448557016"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "6742193365340070648"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "5073346764974627200"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "423351731074598405"
       }
     ],
     "projectFileMap": {
@@ -188,7 +188,7 @@
         },
         {
           "file": "apps/web/src/App.tsx",
-          "hash": "8902768050152952030",
+          "hash": "1206914041540778208",
           "deps": [
             "npm:react-router-dom",
             "npm:react@18.3.1",
@@ -224,7 +224,7 @@
         },
         {
           "file": "apps/web/src/components/ComponentShowcase.tsx",
-          "hash": "7842311289838423792",
+          "hash": "11618397888436746034",
           "deps": [
             "npm:lucide-react"
           ]
@@ -566,7 +566,7 @@
         },
         {
           "file": "apps/web/src/components/reusableComponents/slider.tsx",
-          "hash": "6481002158340097417",
+          "hash": "14973200892071827906",
           "deps": [
             "npm:react@18.3.1",
             "npm:@radix-ui/react-slider"
@@ -686,7 +686,7 @@
         },
         {
           "file": "apps/web/src/pages/AppSidebar.tsx",
-          "hash": "16685485916671270379",
+          "hash": "2984251523467735010",
           "deps": [
             "npm:lucide-react",
             "npm:react-router-dom"
@@ -697,11 +697,26 @@
           "hash": "10627156396546399244"
         },
         {
+          "file": "apps/web/src/pages/analytics/AnalyticsPage.tsx",
+          "hash": "10373953223098224672",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/auth/SignIn.tsx",
-          "hash": "9450701672290828178",
+          "hash": "9310646587012918445",
           "deps": [
             "npm:react@18.3.1",
-            "npm:react-router-dom"
+            "npm:react-router-dom",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/calendar/CalendarPage.tsx",
+          "hash": "4411568531922103084",
+          "deps": [
+            "npm:react@18.3.1"
           ]
         },
         {
@@ -717,7 +732,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/LandingPage.tsx",
-          "hash": "9910691421229623539",
+          "hash": "16563864938166416572",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -832,16 +847,6 @@
           ]
         },
         {
-          "file": "apps/web/src/pages/landing/components/LandingNavbar.tsx",
-          "hash": "16730057944726878522",
-          "deps": [
-            "npm:react@18.3.1",
-            "npm:lucide-react",
-            "npm:motion",
-            "npm:react-router-dom"
-          ]
-        },
-        {
           "file": "apps/web/src/pages/landing/components/PricingSection.tsx",
           "hash": "5708226617407368242",
           "deps": [
@@ -853,9 +858,8 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/ScrollProgress.tsx",
-          "hash": "5347094152255448844",
+          "hash": "3248835048199767431",
           "deps": [
-            "npm:react@18.3.1",
             "npm:motion"
           ]
         },
@@ -866,6 +870,67 @@
         {
           "file": "apps/web/src/pages/landing/components/TestimonialCard.tsx",
           "hash": "1068950899054158505"
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/features/AnalyticsFeature.tsx",
+          "hash": "6324507534645447459",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/features/ProjectBoards.tsx",
+          "hash": "652243743351039914",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/features/TaskManagements.tsx",
+          "hash": "3853089431336615915",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/features/TeamCollaboration.tsx",
+          "hash": "8978813440319430971",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/nav/LandingNavbar.tsx",
+          "hash": "5652967935408929568",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:lucide-react",
+            "npm:motion",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/nav/MobileSection.tsx",
+          "hash": "1458445386416092118",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/nav/constants/navAnimations.ts",
+          "hash": "11814721555368677764"
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/nav/data/navData.ts",
+          "hash": "6437010018474030128"
         },
         {
           "file": "apps/web/src/pages/landing/constants/animations.ts",
@@ -890,6 +955,27 @@
           ]
         },
         {
+          "file": "apps/web/src/pages/projects/ProjectMarketing.tsx",
+          "hash": "1961462573592504383",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/projects/ProjectMobile.tsx",
+          "hash": "3244421341483603138",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/projects/ProjectWebsite.tsx",
+          "hash": "1786154187355866693",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/register/SignUp.tsx",
           "hash": "1770587393969346938",
           "deps": [
@@ -902,6 +988,13 @@
           "hash": "271756720763746958"
         },
         {
+          "file": "apps/web/src/pages/settings/SettingsPage.tsx",
+          "hash": "7824738876682298151",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/tasks/NewTaskModal.tsx",
           "hash": "2163553418127411432",
           "deps": [
@@ -910,10 +1003,17 @@
         },
         {
           "file": "apps/web/src/pages/tasks/TaskBoard.tsx",
-          "hash": "18406268197155676490",
+          "hash": "13990765900260487257",
           "deps": [
             "npm:react@18.3.1",
             "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/tasks/TasksPage.tsx",
+          "hash": "16423019079848951320",
+          "deps": [
+            "npm:react@18.3.1"
           ]
         },
         {
@@ -936,23 +1036,30 @@
           "hash": "14237892122452115874"
         },
         {
+          "file": "apps/web/src/pages/team/TeamPage.tsx",
+          "hash": "3914178766477696986",
+          "deps": [
+            "npm:react@18.3.1"
+          ]
+        },
+        {
           "file": "apps/web/src/routes/README.md",
           "hash": "13977931840884532938"
         },
         {
           "file": "apps/web/src/routes/constants.ts",
-          "hash": "582862003174141049"
+          "hash": "11552381796002341862"
         },
         {
           "file": "apps/web/src/routes/guards.tsx",
-          "hash": "2009991718494359786",
+          "hash": "891071731249254891",
           "deps": [
             "npm:react-router-dom"
           ]
         },
         {
           "file": "apps/web/src/routes/routes.config.ts",
-          "hash": "7567559933421165709",
+          "hash": "7024283871946340840",
           "deps": [
             "npm:react@18.3.1"
           ]

@@ -4,6 +4,7 @@ import { Toaster, toast } from "sonner";
 import { DashboardLayout } from "./layouts/DashboardLayout";
 import {
   PUBLIC_ROUTES,
+  FEATURE_ROUTES,
   PROTECTED_ROUTES,
   ADMIN_ROUTES,
 } from "./routes/routes.config";
@@ -83,6 +84,9 @@ function App() {
         {/* Public routes */}
         {renderRoutes(PUBLIC_ROUTES)}
 
+        {/* Feature showcase routes */}
+        {renderRoutes(FEATURE_ROUTES)}
+
         {/* Protected dashboard routes with layout */}
         <Route
           path={ROUTE_PATHS.DASHBOARD}
@@ -103,6 +107,9 @@ function App() {
           {PROTECTED_ROUTES[0]?.children &&
             renderRoutes(PROTECTED_ROUTES[0].children)}
         </Route>
+
+        {/* Other protected routes (tasks, calendar, analytics, team, settings) */}
+        {renderRoutes(PROTECTED_ROUTES.slice(1))}
 
         {/* Admin routes */}
         {renderRoutes(ADMIN_ROUTES)}

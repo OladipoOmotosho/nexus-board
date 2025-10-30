@@ -1,19 +1,16 @@
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import {
-  CheckCircle2,
-  Clock,
   ArrowRight,
-  Zap,
   Users,
-  BarChart3,
   CheckSquare,
   Calendar,
   Bell,
-  Filter,
   Tag,
   TrendingUp,
 } from "lucide-react";
+import { LandingNavbar } from "../nav/LandingNavbar";
+import { ScrollProgress } from "../ScrollProgress";
 
 const features = [
   {
@@ -77,7 +74,7 @@ const testimonials = [
   },
 ];
 
-export default function TaskManagementFeature() {
+export default function TaskManagement() {
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
   const demoRef = useRef(null);
@@ -87,6 +84,8 @@ export default function TaskManagementFeature() {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
+      <ScrollProgress />
+      <LandingNavbar />
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -213,7 +212,7 @@ export default function TaskManagementFeature() {
               </div>
 
               {/* Kanban Board Content */}
-              <div className="bg-gradient-to-br from-background via-muted/5 to-background p-8">
+              <div className="bg-linear-to-br from-background via-muted/5 to-background p-8">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
                   <div>

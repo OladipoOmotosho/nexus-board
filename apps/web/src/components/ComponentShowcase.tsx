@@ -90,7 +90,7 @@ export function ComponentShowcase() {
               This is a card component with default styling using design tokens.
             </p>
           </Card>
-          <Card className="p-6 bg-gradient-to-br from-hero-gradient-from/10 to-hero-gradient-via/10 border-hero-gradient-from/20">
+          <Card className="p-6 bg-linear-to-br from-hero-gradient-from/10 to-hero-gradient-via/10 border-hero-gradient-from/20">
             <h3 className="mb-2">Gradient Card</h3>
             <p className="text-muted-foreground">
               Cards can use gradient backgrounds with hero gradient tokens.

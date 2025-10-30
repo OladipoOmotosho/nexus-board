@@ -54,6 +54,13 @@ export function LandingNavbar() {
     duration: reduceMotion ? 0 : 0.18,
     ease: "easeInOut" as const,
   };
+
+  const handleLogoClick = () => {
+    navigate("/");
+    setMobileOpen(false);
+    setActiveDropdown(null);
+  };
+
   const handlePricingClick = () => {
     setMobileOpen(false);
     scrollToSection(LANDING_SECTIONS.PRICING);
@@ -63,6 +70,12 @@ export function LandingNavbar() {
     setMobileOpen(false);
     scrollToSection(LANDING_SECTIONS.FAQ);
   };
+
+  const handleNavItemClick = (path: string) => {
+    navigate(path);
+    setActiveDropdown(null);
+  };
+
   return (
     <motion.nav
       variants={fadeDown}
@@ -75,7 +88,6 @@ export function LandingNavbar() {
       className={[
         "fixed top-0 left-0 right-0 z-50 w-full transition-colors",
         "border-b border-border/60",
-        // soft glassmorphism using your tokens
         scrolled
           ? "bg-background/60 backdrop-blur-md shadow-sm"
           : "bg-background/30 backdrop-blur-sm",
@@ -87,7 +99,11 @@ export function LandingNavbar() {
         {/* Row */}
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <button
+            onClick={handleLogoClick}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="Nexus Board home"
+          >
             <div
               className="size-9 rounded-lg flex items-center justify-center border border-border/60"
               style={{
@@ -95,12 +111,12 @@ export function LandingNavbar() {
                   "linear-gradient(135deg,var(--hero-gradient-from),var(--hero-gradient-via))",
               }}
             >
-              <span className="text-white font-semibold">N</span>
+              <span className="text-white font-semibold cursor-pointer">N</span>
             </div>
-            <span className="text-lg font-semibold text-foreground">
+            <span className="text-lg font-semibold text-foreground cursor-pointer">
               Nexus Board
             </span>
-          </div>
+          </button>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
@@ -141,6 +157,7 @@ export function LandingNavbar() {
                         {NAV_SECTIONS[key].map((item, i) => (
                           <motion.button
                             key={item.name}
+                            onClick={() => handleNavItemClick(item.path)}
                             initial={{ opacity: 0, x: -8 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{
@@ -259,10 +276,15 @@ export function LandingNavbar() {
 
               {/* Scrollable content area */}
               <div className="p-4 space-y-6 overflow-y-auto flex-1">
-                <MobileSection title="Products" items={NAV_SECTIONS.products} />
+                <MobileSection
+                  title="Products"
+                  items={NAV_SECTIONS.products}
+                  onNavigate={() => setMobileOpen(false)}
+                />
                 <MobileSection
                   title="Solutions"
                   items={NAV_SECTIONS.solutions}
+                  onNavigate={() => setMobileOpen(false)}
                 />
                 <div className="flex flex-col gap-3 pt-4 border-t border-border/60 space-y-2">
                   <button

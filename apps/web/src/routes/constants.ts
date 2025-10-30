@@ -11,17 +11,27 @@ export const ROUTE_PATHS = {
 
   // Protected routes (dashboard layout)
   DASHBOARD: "/dashboard",
-  TASKS: "/dashboard/tasks",
-  CALENDAR: "/dashboard/calendar",
-  ANALYTICS: "/dashboard/analytics",
-  TEAM: "/dashboard/team",
-  SETTINGS: "/dashboard/settings",
-  PROJECT: (id: string) => `/dashboard/project/${id}`,
+  TASKS: "/tasks",
+  CALENDAR: "/calendar",
+  ANALYTICS: "/analytics",
+  TEAM: "/team",
+  SETTINGS: "/settings",
 
-  // Admin routes (future)
+  // Projects
+  PROJECT_WEBSITE: "/projects/website",
+  PROJECT_MOBILE: "/projects/mobile",
+  PROJECT_MARKETING: "/projects/marketing",
+
+  // Admin routes
   ADMIN: "/admin",
   ADMIN_USERS: "/admin/users",
   ADMIN_SETTINGS: "/admin/settings",
+
+  // Feature routes
+  FEATURE_TASK_MANAGEMENT: "/features/task-management",
+  FEATURE_TEAM_COLLABORATION: "/features/team-collaboration",
+  FEATURE_PROJECT_BOARDS: "/features/project-boards",
+  FEATURE_ANALYTICS: "/features/analytics",
 
   // Catch-all / Not Found
   NOT_FOUND: "*",
