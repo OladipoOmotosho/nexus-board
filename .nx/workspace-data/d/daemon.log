@@ -3546,3 +3546,790 @@ Time for 'build typescript dependencies' 0.11410000175237656
 [NX v22.0.1 Daemon Server] - 2025-10-30T02:18:10.850Z - Done responding to the client handleContextFileData
 [NX v22.0.1 Daemon Server] - 2025-10-30T02:18:10.850Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
 [NX v22.0.1 Daemon Server] - 2025-10-30T02:18:10.850Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-10-30T02:34:42.274Z - Closed a connection. Number of open connections: 1
+[NX v22.0.1 Daemon Server] - 2025-10-30T05:24:38.099Z - Closed a connection. Number of open connections: 0
+[NX v22.0.1 Daemon Server] - 2025-10-30T05:24:38.118Z - [WATCHER]: Stopping the watcher for c:\Users\OMOTOSHO\Desktop\myJourney\nexus-board (sources)
+[NX v22.0.1 Daemon Server] - 2025-10-30T05:24:38.118Z - [WATCHER]: Stopping the watcher for c:\Users\OMOTOSHO\Desktop\myJourney\nexus-board (outputs)
+[NX v22.0.1 Daemon Server] - 2025-10-30T05:24:38.202Z - Server stopped because: "10800000ms of inactivity"
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.054Z - Started listening on: \\.\pipe\nx\C:\Users\OMOTOSHO\AppData\Local\Temp\b59e5d39260b09db949e\d.sock
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.077Z - [WATCHER]: Subscribed to changes within: C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board (native)
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.080Z - Established a connection. Number of open connections: 1
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.083Z - Established a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.088Z - Closed a connection. Number of open connections: 1
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:18.095Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 27120 code loading' 21.7789
+Time for 'plugin worker 26708 code loading' 29.584799999999994
+Time for 'plugin worker 26716 code loading' 27.5475
+Time for 'plugin worker 27200 code loading' 21.416300000000007
+Time for 'plugin worker 26768 code loading' 34.461200000000005
+Time for 'plugin worker 27196 code loading' 17.3037
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:19.323Z - Time taken for 'Load Nx Plugin: C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\node_modules\.pnpm\nx@22.0.1_@swc-node+registe_37aa36c48ddb3a29029f21bb7f7ca8b8\node_modules\nx\src\plugins\project-json\build-nodes\project-json' 1191.4923000000001ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:19.342Z - Time taken for 'Load Nx Plugin: C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\node_modules\.pnpm\nx@22.0.1_@swc-node+registe_37aa36c48ddb3a29029f21bb7f7ca8b8\node_modules\nx\src\plugins\package-json' 1212.4743ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:19.449Z - Time taken for 'loadDefaultNxPlugins' 1323.0237999999997ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:19.957Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 1857.6422000000002ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.383Z - Time taken for 'Load Nx Plugin: @nx/playwright/plugin' 2265.5377ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.388Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.388Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.388Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.399Z - No files changed, but no in-memory cached project graph found. Recomputing it...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.412Z - Time taken for 'loadSpecifiedNxPlugins' 2287.5483000000004ms
+Time for 'nx/core/project-json:createNodes' 3.7628999999997177
+Time for '@nx/playwright/plugin:createNodes' 7.218899999999849
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 15.073100000000068
+Time for '@nx/js/typescript:createNodes' 28.822999999999865
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.449Z - Established a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.449Z - Closed a connection. Number of open connections: 1
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.451Z - Established a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.455Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.456Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:20.456Z - Handled HASH_GLOB. Handling time: 1. Response time: 2.
+Time for 'nx/core/package-json:createNodes' 47.51099999999997
+Time for 'total for sendMessageToDaemon()' 4.807600000000093
+Time for 'deserialize daemon response' 0.05420000000003711
+Time for '@nx/vite/plugin:createNodes' 1709.4328
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:22.206Z - Time taken for 'build-project-configs' 1743.136ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:22.216Z - Time taken for '@nx/js/typescript:createDependencies' 16.943900000000212ms
+Time for 'build typescript dependencies' 40.396400000000085
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:22.283Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 79.57999999999993ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.532Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.534Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.536Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.538Z - Time taken for 'total for creating and serializing project graph' 6441.3569ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.540Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.540Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 6441. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.559Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.559Z - Time taken for 'preTasksExecution' 1.8855000000003201ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.560Z - Done responding to the client handleRunPreTasksExecution
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.560Z - Handled PRE_TASKS_EXECUTION. Handling time: 2. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.692Z - Reusing in-memory cached project graph because no files changed.
+DEBUG nx::native::tasks::hash_planner: get_plans_internal COMPLETED in 13.6194ms - processed 1 tasks (setup: 11.293ms, parallel_planning: 2.2755ms)
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Adding "6533975126999815229" (".gitignore") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Adding "10786912969479474318" ("nx.json") to hash
+DEBUG nx::native::tasks::hashers::hash_workspace_files: Hashing workspace fileset{cache_key="nx.json,.gitignore,.nxignore"}: Hash Value: "6209732351193915357"
+DEBUG nx::native::tasks::task_hasher: hash_plans COMPLETED in 5.421ms - processed 1 plans (setup: 901.5µs, hashing: 4.5065ms, assembly: 1.9717ms)
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.738Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.743Z - Done responding to the client handleHashTasks
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:24.744Z - Handled HASH_TASKS. Handling time: 48. Response time: 6.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:26.465Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:26.467Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:26.467Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 12. Response time: 2.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.579Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.585Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.589Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.589Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.591Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.596Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.598Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.599Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.601Z - Time taken for 'total for creating and serializing project graph' 2.365399999998772ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.602Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.603Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.617Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.619Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.619Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 2.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:24:41.623Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:04.953Z - [WATCHER]: apps/web/src/components/reusableComponents/skeleton.tsx was deleted
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:04.953Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.061Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.061Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.061Z - [REQUEST]: apps/web/src/components/reusableComponents/skeleton.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.070Z - Time taken for 'hash changed files from watcher' 0.26139999998849817ms
+Time for '@nx/playwright/plugin:createNodes' 2.5754999999771826
+Time for 'nx/core/project-json:createNodes' 6.660100000008242
+Time for 'nx/core/package-json:createNodes' 12.608600000006845
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.091Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.091Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.091Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 18.154099999985192
+Time for 'total for sendMessageToDaemon()' 5.562999999994645
+Time for 'deserialize daemon response' 0.08730000001378357
+Time for '@nx/js/typescript:createNodes' 34.34330000000773
+Time for '@nx/vite/plugin:createNodes' 151.7394000000204
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.256Z - Time taken for 'build-project-configs' 161.24649999997928ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.265Z - Time taken for '@nx/vite/plugin:createDependencies' 15.9206000000122ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.267Z - Time taken for '@nx/js/typescript:createDependencies' 20.682700000004843ms
+Time for 'build typescript dependencies' 0.08409999997820705
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.397Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.398Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.400Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.400Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:05.400Z - Time taken for 'total execution time for createProjectGraph()' 74.68270000000484ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.003Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.003Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.005Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.006Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.007Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.010Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.011Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.011Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.014Z - Time taken for 'total for creating and serializing project graph' 1.5370000000111759ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.016Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.017Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 6.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.036Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.036Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.036Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:27:16.039Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.215Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.225Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.343Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.344Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.379Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.379Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.379Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.396Z - Time taken for 'hash changed files from watcher' 0.5820000000530854ms
+Time for 'nx/core/project-json:createNodes' 6.342999999993481
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.466Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.468Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.468Z - Handled HASH_GLOB. Handling time: 2. Response time: 2.
+Time for 'total for sendMessageToDaemon()' 8.81359999999404
+Time for 'deserialize daemon response' 0.07620000001043081
+Time for '@nx/playwright/plugin:createNodes' 229.96929999999702
+Time for 'nx/core/package-json:createNodes' 241.74089999997523
+Time for '@nx/vite/plugin:createNodes' 261.70979999995325
+Time for '@nx/js/typescript:createNodes' 273.9394999999786
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 272.217699999921
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.719Z - Time taken for 'build-project-configs' 290.2422999999253ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.720Z - Time taken for '@nx/js/typescript:createDependencies' 14.44419999991078ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:24.721Z - Time taken for '@nx/vite/plugin:createDependencies' 8.602599999983795ms
+Time for 'build typescript dependencies' 338.80650000006426
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:25.227Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:25.229Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:25.230Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:25.230Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:25.230Z - Time taken for 'total execution time for createProjectGraph()' 446.4152999999933ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.357Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.358Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.358Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.359Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.359Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.361Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.361Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.361Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.363Z - Time taken for 'total for creating and serializing project graph' 0.9050999999744818ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.364Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.364Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.373Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.374Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.374Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:39:35.377Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.511Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.514Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.628Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.628Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.628Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.641Z - Time taken for 'hash changed files from watcher' 0.4808000000193715ms
+Time for '@nx/playwright/plugin:createNodes' 2.668999999994412
+Time for 'nx/core/project-json:createNodes' 3.138899999903515
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.655Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.656Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.656Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+Time for 'nx/core/package-json:createNodes' 14.768500000005588
+Time for 'total for sendMessageToDaemon()' 6.011300000129268
+Time for 'deserialize daemon response' 0.03300000005401671
+Time for '@nx/js/typescript:createNodes' 32.05569999990985
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 24.31359999999404
+Time for '@nx/vite/plugin:createNodes' 98.7457000000868
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.775Z - Time taken for 'build-project-configs' 103.65029999986291ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.777Z - Time taken for '@nx/js/typescript:createDependencies' 17.675400000065565ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.777Z - Time taken for '@nx/vite/plugin:createDependencies' 11.392599999904633ms
+Time for 'build typescript dependencies' 17.3941000001505
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.880Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.880Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.881Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.881Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:07.881Z - Time taken for 'total execution time for createProjectGraph()' 98.19610000005923ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.549Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.550Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.552Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.553Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.555Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.559Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.560Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.561Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.566Z - Time taken for 'total for creating and serializing project graph' 2.2335999999195337ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.569Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.569Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 8.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.586Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.586Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.586Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:42:18.590Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.158Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.159Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.266Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.266Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.266Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.277Z - Time taken for 'hash changed files from watcher' 0.47340000001713634ms
+Time for '@nx/playwright/plugin:createNodes' 3.4683000000659376
+Time for 'nx/core/project-json:createNodes' 1.0692000000271946
+Time for 'nx/core/package-json:createNodes' 9.009300000034273
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.291Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.292Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.293Z - Handled HASH_GLOB. Handling time: 2. Response time: 2.
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 13.942299999995157
+Time for '@nx/js/typescript:createNodes' 29.138999999966472
+Time for '@nx/vite/plugin:createNodes' 27.775399999925867
+Time for 'total for sendMessageToDaemon()' 6.316499999957159
+Time for 'deserialize daemon response' 0.039000000106170774
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.327Z - Time taken for 'build-project-configs' 35.65170000004582ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.329Z - Time taken for '@nx/js/typescript:createDependencies' 11.681600000010803ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.336Z - Time taken for '@nx/vite/plugin:createDependencies' 16.843800000147894ms
+Time for 'build typescript dependencies' 21.60410000011325
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.437Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.437Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.438Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.438Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:18.438Z - Time taken for 'total execution time for createProjectGraph()' 88.48619999992661ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.179Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.180Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.184Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.185Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.187Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.192Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.193Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.194Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.200Z - Time taken for 'total for creating and serializing project graph' 2.215800000121817ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.214Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.215Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 21.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.221Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.221Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.222Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 2. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:43:29.224Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.502Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.504Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.616Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.617Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.617Z - [REQUEST]: 
+Time for '@nx/playwright/plugin:createNodes' 6.5750000001862645
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.656Z - Time taken for 'hash changed files from watcher' 1.0045999998692423ms
+Time for 'nx/core/project-json:createNodes' 1.479300000006333
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.684Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+Time for 'nx/core/package-json:createNodes' 26.122300000162795
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.687Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.687Z - Handled HASH_GLOB. Handling time: 3. Response time: 3.
+Time for '@nx/js/typescript:createNodes' 61.56359999999404
+Time for 'total for sendMessageToDaemon()' 23.6781000001356
+Time for 'deserialize daemon response' 0.07090000016614795
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 38.42550000012852
+Time for '@nx/vite/plugin:createNodes' 172.43570000003092
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.864Z - Time taken for 'build-project-configs' 193.30010000010952ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.868Z - Time taken for '@nx/vite/plugin:createDependencies' 14.117700000060722ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.869Z - Time taken for '@nx/js/typescript:createDependencies' 18.702800000086427ms
+Time for 'build typescript dependencies' 20.625
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.971Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.972Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.974Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.974Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:20.975Z - Time taken for 'total execution time for createProjectGraph()' 103.34150000009686ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.533Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.534Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.536Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.537Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.538Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.541Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.543Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.543Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.548Z - Time taken for 'total for creating and serializing project graph' 2.2231000000610948ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.550Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.551Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 8.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.573Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.574Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.574Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 2. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:31.578Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:51.992Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:51.997Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.105Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.105Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.106Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.119Z - Time taken for 'hash changed files from watcher' 1.5792000000365078ms
+Time for '@nx/playwright/plugin:createNodes' 2.8936000000685453
+Time for 'nx/core/project-json:createNodes' 1.127199999988079
+Time for 'nx/core/package-json:createNodes' 13.794400000013411
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.137Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.138Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.139Z - Handled HASH_GLOB. Handling time: 3. Response time: 2.
+Time for '@nx/js/typescript:createNodes' 26.424200000008568
+Time for '@nx/vite/plugin:createNodes' 27.475300000049174
+Time for 'total for sendMessageToDaemon()' 8.312899999786168
+Time for 'deserialize daemon response' 0.03499999991618097
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 26.91770000010729
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.184Z - Time taken for 'build-project-configs' 44.477400000207126ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.185Z - Time taken for '@nx/js/typescript:createDependencies' 13.392899999860674ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.188Z - Time taken for '@nx/vite/plugin:createDependencies' 10.089900000020862ms
+Time for 'build typescript dependencies' 12.166500000050291
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.288Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.288Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.289Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.289Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:52.290Z - Time taken for 'total execution time for createProjectGraph()' 83.1606000000611ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.162Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.163Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.366Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.366Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.367Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.377Z - Time taken for 'hash changed files from watcher' 0.9288999999407679ms
+Time for '@nx/playwright/plugin:createNodes' 6.880600000033155
+Time for 'nx/core/project-json:createNodes' 2.717699999921024
+Time for 'nx/core/package-json:createNodes' 10.205700000049546
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.394Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.395Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.396Z - Handled HASH_GLOB. Handling time: 2. Response time: 2.
+Time for '@nx/js/typescript:createNodes' 21.133899999782443
+Time for 'total for sendMessageToDaemon()' 6.882599999895319
+Time for 'deserialize daemon response' 0.05920000001788139
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 20.572700000135228
+Time for '@nx/vite/plugin:createNodes' 131.36939999996684
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.549Z - Time taken for 'build-project-configs' 140.25989999994636ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.551Z - Time taken for '@nx/js/typescript:createDependencies' 20.770000000018626ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.557Z - Time taken for '@nx/vite/plugin:createDependencies' 21.322399999946356ms
+Time for 'build typescript dependencies' 18.60769999981858
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.638Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.638Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.639Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.639Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:44:59.639Z - Time taken for 'total execution time for createProjectGraph()' 82.69399999990128ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.185Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.186Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.187Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.187Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.188Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.189Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.191Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.191Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.194Z - Time taken for 'total for creating and serializing project graph' 1.5927000001538545ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.195Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.195Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.206Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.206Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.206Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:10.210Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.540Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.545Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.660Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.660Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.661Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.676Z - Time taken for 'hash changed files from watcher' 1.1801999998278916ms
+Time for '@nx/playwright/plugin:createNodes' 4.821400000015274
+Time for 'nx/core/project-json:createNodes' 1.3466000000480562
+Time for 'nx/core/package-json:createNodes' 5.930800000205636
+Time for '@nx/js/typescript:createNodes' 19.036599999992177
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.699Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.701Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.701Z - Handled HASH_GLOB. Handling time: 2. Response time: 2.
+Time for '@nx/vite/plugin:createNodes' 30.79689999995753
+Time for 'total for sendMessageToDaemon()' 6.286199999973178
+Time for 'deserialize daemon response' 0.026799999875947833
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 21.991200000047684
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.730Z - Time taken for 'build-project-configs' 44.013499999884516ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.731Z - Time taken for '@nx/js/typescript:createDependencies' 8.722099999897182ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.733Z - Time taken for '@nx/vite/plugin:createDependencies' 8.53719999990426ms
+Time for 'build typescript dependencies' 7.187399999937043
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.790Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.791Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.792Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.792Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:13.792Z - Time taken for 'total execution time for createProjectGraph()' 45.0276999999769ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.574Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.574Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.575Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.575Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.576Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.578Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.578Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.579Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.580Z - Time taken for 'total for creating and serializing project graph' 0.9810999999754131ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.582Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.582Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.589Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.589Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.589Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:45:24.592Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.612Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.612Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.724Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.725Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.725Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.735Z - Time taken for 'hash changed files from watcher' 0.9679000000469387ms
+Time for '@nx/playwright/plugin:createNodes' 5.789000000106171
+Time for 'nx/core/project-json:createNodes' 6.760599999921396
+Time for 'nx/core/package-json:createNodes' 11.331400000024587
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 16.746900000143796
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.760Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+Time for 'total for sendMessageToDaemon()' 11.09900000016205
+Time for 'deserialize daemon response' 0.03570000012405217
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.766Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.766Z - Handled HASH_GLOB. Handling time: 6. Response time: 6.
+Time for '@nx/js/typescript:createNodes' 42.03830000013113
+Time for '@nx/vite/plugin:createNodes' 191.77269999985583
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.968Z - Time taken for 'build-project-configs' 204.09349999995902ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:11.970Z - Time taken for '@nx/js/typescript:createDependencies' 14.421300000045449ms
+Time for 'build typescript dependencies' 11.925000000046566
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:12.082Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:12.082Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:12.084Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:12.084Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:12.084Z - Time taken for 'total execution time for createProjectGraph()' 97.65110000013374ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.633Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.633Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.634Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.635Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.636Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.639Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.641Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.642Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.646Z - Time taken for 'total for creating and serializing project graph' 2.4244999999646097ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.647Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.647Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 3. Response time: 5.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.659Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.659Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.659Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:22.660Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.824Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.828Z - [WATCHER]: apps/web/src/pages/landing/components/AnimatedProductPreview.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.941Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.941Z - [REQUEST]: apps/web/src/pages/landing/components/AnimatedProductPreview.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.941Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.949Z - Time taken for 'hash changed files from watcher' 0.6289000001270324ms
+Time for '@nx/playwright/plugin:createNodes' 3.8811000001151115
+Time for 'nx/core/package-json:createNodes' 9.778700000140816
+Time for 'nx/core/project-json:createNodes' 14.12569999997504
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 16.13980000000447
+Time for '@nx/js/typescript:createNodes' 27.894400000106543
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.983Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.984Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:25.984Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 12.311699999962002
+Time for 'deserialize daemon response' 0.029399999883025885
+Time for '@nx/vite/plugin:createNodes' 122.11439999984577
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.110Z - Time taken for 'build-project-configs' 127.12119999993593ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.112Z - Time taken for '@nx/js/typescript:createDependencies' 25.38150000013411ms
+Time for 'build typescript dependencies' 15.147200000006706
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.203Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.204Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.206Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.206Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:26.207Z - Time taken for 'total execution time for createProjectGraph()' 90.03700000001118ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.853Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.853Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.854Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.855Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.855Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.857Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.859Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.859Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.862Z - Time taken for 'total for creating and serializing project graph' 1.4307999999728054ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.863Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.863Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.873Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.875Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.875Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 2.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:36.876Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:39.922Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:39.922Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.033Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.033Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.033Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.045Z - Time taken for 'hash changed files from watcher' 1.2354000001214445ms
+Time for '@nx/playwright/plugin:createNodes' 3.7002000000793487
+Time for 'nx/core/package-json:createNodes' 6.671199999982491
+Time for 'nx/core/project-json:createNodes' 1.2287999999243766
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.060Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.061Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.061Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 6.0682000000961125
+Time for 'deserialize daemon response' 0.03640000009909272
+Time for '@nx/js/typescript:createNodes' 28.92050000000745
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 23.45339999999851
+Time for '@nx/vite/plugin:createNodes' 118.41740000015125
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.191Z - Time taken for 'build-project-configs' 124.46039999998175ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.193Z - Time taken for '@nx/js/typescript:createDependencies' 17.376900000032037ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.196Z - Time taken for '@nx/vite/plugin:createDependencies' 18.627300000051036ms
+Time for 'build typescript dependencies' 18.486199999926612
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.286Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.286Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.287Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.287Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:40.288Z - Time taken for 'total execution time for createProjectGraph()' 83.0453999999445ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.951Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.952Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.953Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.954Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.958Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.961Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.962Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.962Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.966Z - Time taken for 'total for creating and serializing project graph' 1.5103000001981854ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.967Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.968Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 6.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.978Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.979Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.979Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:51:50.980Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.226Z - [WATCHER]: apps/web/src/pages/landing/LandingPage.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.227Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.341Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.341Z - [REQUEST]: apps/web/src/pages/landing/LandingPage.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.342Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.355Z - Time taken for 'hash changed files from watcher' 1.3756999999750406ms
+Time for '@nx/playwright/plugin:createNodes' 3.4091000000480562
+Time for 'nx/core/project-json:createNodes' 1.3832000000402331
+Time for 'nx/core/package-json:createNodes' 6.676399999996647
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.379Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.380Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.380Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 6.239199999952689
+Time for 'deserialize daemon response' 0.0348000000230968
+Time for '@nx/js/typescript:createNodes' 29.45699999993667
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 29.54689999995753
+Time for '@nx/vite/plugin:createNodes' 116.70449999999255
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.513Z - Time taken for 'build-project-configs' 124.57959999982268ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.517Z - Time taken for '@nx/js/typescript:createDependencies' 26.87360000004992ms
+Time for 'build typescript dependencies' 20.80710000009276
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.605Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.605Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.606Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.606Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:53:53.606Z - Time taken for 'total execution time for createProjectGraph()' 83.03750000009313ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.263Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.263Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.263Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.264Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.264Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.266Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.267Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.267Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.268Z - Time taken for 'total for creating and serializing project graph' 0.9917999999597669ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.271Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.272Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 5.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.288Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.288Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.288Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:04.289Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.383Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.386Z - [WATCHER]: apps/web/src/pages/landing/LandingPage.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.501Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.501Z - [REQUEST]: apps/web/src/pages/landing/LandingPage.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.501Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.515Z - Time taken for 'hash changed files from watcher' 0.6293999999761581ms
+Time for '@nx/playwright/plugin:createNodes' 5.176800000015646
+Time for 'nx/core/package-json:createNodes' 4.574400000041351
+Time for 'nx/core/project-json:createNodes' 0.6359000001102686
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 13.355599999893457
+Time for '@nx/js/typescript:createNodes' 27.77019999991171
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.544Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.545Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.545Z - Handled HASH_GLOB. Handling time: 2. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 9.379100000020117
+Time for 'deserialize daemon response' 0.038100000005215406
+Time for '@nx/vite/plugin:createNodes' 117.24890000000596
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.679Z - Time taken for 'build-project-configs' 129.5856999999378ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.681Z - Time taken for '@nx/js/typescript:createDependencies' 18.558000000193715ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.682Z - Time taken for '@nx/vite/plugin:createDependencies' 9.230699999956414ms
+Time for 'build typescript dependencies' 17.404100000159815
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.808Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.808Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.809Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.810Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:39.810Z - Time taken for 'total execution time for createProjectGraph()' 105.82360000000335ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.407Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.408Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.410Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.411Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.412Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.416Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.418Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.419Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.425Z - Time taken for 'total for creating and serializing project graph' 2.9825999999884516ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.427Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.428Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 4. Response time: 8.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.451Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.454Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.455Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 3.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:54:50.458Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.477Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.479Z - [WATCHER]: apps/web/src/pages/landing/components/AnimatedProductPreview.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.586Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.586Z - [REQUEST]: apps/web/src/pages/landing/components/AnimatedProductPreview.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.586Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.596Z - Time taken for 'hash changed files from watcher' 0.4943999999668449ms
+Time for 'nx/core/project-json:createNodes' 1.139899999834597
+Time for '@nx/playwright/plugin:createNodes' 2.7132999999448657
+Time for 'nx/core/package-json:createNodes' 6.333300000056624
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.609Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.610Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.610Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 6.788899999810383
+Time for 'deserialize daemon response' 0.027800000039860606
+Time for '@nx/js/typescript:createNodes' 26.33560000010766
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 23.609999999869615
+Time for '@nx/vite/plugin:createNodes' 93.75300000002608
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.722Z - Time taken for 'build-project-configs' 98.84390000021085ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.724Z - Time taken for '@nx/js/typescript:createDependencies' 18.319600000046194ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.724Z - Time taken for '@nx/vite/plugin:createDependencies' 13.007800000021234ms
+Time for 'build typescript dependencies' 14.117599999997765
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.818Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.818Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.819Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.820Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:29.820Z - Time taken for 'total execution time for createProjectGraph()' 79.72259999997914ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.523Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.524Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.525Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.526Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.528Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.530Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.531Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.532Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.533Z - Time taken for 'total for creating and serializing project graph' 1.4824999999254942ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.534Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.535Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 3.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.548Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.549Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.549Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:40.549Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.517Z - [WATCHER]: apps/web/src/pages/landing/components/HeroSection.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.518Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.633Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.633Z - [REQUEST]: apps/web/src/pages/landing/components/HeroSection.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.634Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.644Z - Time taken for 'hash changed files from watcher' 0.9226999999955297ms
+Time for '@nx/playwright/plugin:createNodes' 2.558099999791011
+Time for 'nx/core/project-json:createNodes' 1.0599999998230487
+Time for 'nx/core/package-json:createNodes' 8.30599999986589
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.655Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.656Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.656Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 4.628000000026077
+Time for 'deserialize daemon response' 0.055500000016763806
+Time for '@nx/js/typescript:createNodes' 19.226599999936298
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 13.768900000024587
+Time for '@nx/vite/plugin:createNodes' 82.90749999997206
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.745Z - Time taken for 'build-project-configs' 87.37180000008084ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.748Z - Time taken for '@nx/js/typescript:createDependencies' 12.994299999903888ms
+Time for 'build typescript dependencies' 8.934300000080839
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.830Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.830Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.831Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.831Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:55:49.831Z - Time taken for 'total execution time for createProjectGraph()' 64.435899999924ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.540Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.540Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.541Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.541Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.542Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.544Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.544Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.544Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.547Z - Time taken for 'total for creating and serializing project graph' 0.7661999999545515ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.548Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.548Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.564Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.564Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.564Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:00.566Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.794Z - [WATCHER]: apps/web/src/pages/landing/LandingPage.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.794Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.908Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.908Z - [REQUEST]: apps/web/src/pages/landing/LandingPage.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.908Z - [REQUEST]: 
+Time for '@nx/playwright/plugin:createNodes' 2.2442000000737607
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.921Z - Time taken for 'hash changed files from watcher' 0.625ms
+Time for 'nx/core/project-json:createNodes' 0.9072000000160187
+Time for 'nx/core/package-json:createNodes' 9.707799999974668
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.935Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.936Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.937Z - Handled HASH_GLOB. Handling time: 3. Response time: 2.
+Time for '@nx/js/typescript:createNodes' 21.03220000001602
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 17.637000000104308
+Time for '@nx/vite/plugin:createNodes' 30.504899999825284
+Time for 'total for sendMessageToDaemon()' 9.587200000183657
+Time for 'deserialize daemon response' 0.06020000018179417
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.966Z - Time taken for 'build-project-configs' 35.97389999986626ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.968Z - Time taken for '@nx/js/typescript:createDependencies' 10.291800000006333ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:01.969Z - Time taken for '@nx/vite/plugin:createDependencies' 8.848899999866262ms
+Time for 'build typescript dependencies' 15.600899999961257
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:02.048Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:02.049Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:02.049Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:02.049Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:02.050Z - Time taken for 'total execution time for createProjectGraph()' 64.75170000013895ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.820Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.821Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.822Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.823Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.823Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.826Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.827Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.828Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.831Z - Time taken for 'total for creating and serializing project graph' 1.6417000000365078ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.832Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.832Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.844Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.845Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.845Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 1.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:12.846Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.634Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.638Z - [WATCHER]: apps/web/src/pages/landing/components/AnimatedIncidentPreview.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.747Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.748Z - [REQUEST]: apps/web/src/pages/landing/components/AnimatedIncidentPreview.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.748Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.763Z - Time taken for 'hash changed files from watcher' 1.2720000001136214ms
+Time for '@nx/playwright/plugin:createNodes' 2.576799999922514
+Time for 'nx/core/project-json:createNodes' 0.9014000000897795
+Time for 'nx/core/package-json:createNodes' 6.71819999977015
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 10.453899999847636
+Time for '@nx/js/typescript:createNodes' 31.61270000017248
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.791Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.793Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.794Z - Handled HASH_GLOB. Handling time: 3. Response time: 3.
+Time for 'total for sendMessageToDaemon()' 15.339900000020862
+Time for 'deserialize daemon response' 0.05839999997988343
+Time for '@nx/vite/plugin:createNodes' 126.40650000004098
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.924Z - Time taken for 'build-project-configs' 135.99439999996684ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:24.928Z - Time taken for '@nx/js/typescript:createDependencies' 16.530900000128895ms
+Time for 'build typescript dependencies' 15.215499999932945
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:25.015Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:25.015Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:25.016Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:25.016Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:25.016Z - Time taken for 'total execution time for createProjectGraph()' 74.7902999999933ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.657Z - [WATCHER]: apps/web/src/pages/landing/components/AnimatedIncidentPreview.tsx was modified
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.658Z - [WATCHER]: Processing file changes in outputs
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.865Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.866Z - [REQUEST]: apps/web/src/pages/landing/components/AnimatedIncidentPreview.tsx
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.866Z - [REQUEST]: 
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.907Z - Time taken for 'hash changed files from watcher' 1.8859999999403954ms
+Time for 'nx/core/project-json:createNodes' 0.5213999999687076
+Time for '@nx/playwright/plugin:createNodes' 4.390699999872595
+Time for 'nx/core/package-json:createNodes' 5.00359999993816
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 26.54260000004433
+Time for '@nx/js/typescript:createNodes' 37.900499999988824
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.946Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+Time for 'total for sendMessageToDaemon()' 14.878800000064075
+Time for 'deserialize daemon response' 0.06920000002719462
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.964Z - Done responding to the client handleHashMultiGlob
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:26.964Z - Handled HASH_GLOB. Handling time: 5. Response time: 18.
+Time for '@nx/vite/plugin:createNodes' 162.38510000007227
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.118Z - Time taken for 'build-project-configs' 172.81220000004396ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.121Z - Time taken for '@nx/js/typescript:createDependencies' 21.649500000057742ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.128Z - Time taken for '@nx/vite/plugin:createDependencies' 20.852699999930337ms
+Time for 'build typescript dependencies' 11.264500000048429
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.240Z - Wrote project graph cache to C:\Users\OMOTOSHO\Desktop\myJourney\nexus-board\.nx\workspace-data\project-graph.json
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.240Z - [SYNC]: collect registered sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.241Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.241Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:27.242Z - Time taken for 'total execution time for createProjectGraph()' 95.88890000013635ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.674Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.675Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.676Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.677Z - Closed a connection. Number of open connections: 2
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.678Z - Established a connection. Number of open connections: 3
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.682Z - [REQUEST]: Client Request for Project Graph Received
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.683Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.683Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.685Z - Time taken for 'total for creating and serializing project graph' 1.5449999999254942ms
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.687Z - Done responding to the client project-graph
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.687Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 4.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.704Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.704Z - Done responding to the client handleContextFileData
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.704Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v22.0.1 Daemon Server] - 2025-11-03T02:56:37.706Z - Closed a connection. Number of open connections: 2

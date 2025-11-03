@@ -51,28 +51,20 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "ARCHITECTURE.md",
-        "hash": "11095640533682211180"
+        "file": "AGENTS.md",
+        "hash": "5706578983456977230"
       },
       {
-        "file": "ROUTING_SETUP.md",
-        "hash": "11484227070800776888"
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
       },
       {
-        "file": ".gemini/settings.json",
-        "hash": "5921792102792576356"
-      },
-      {
-        "file": "postcss.config.js",
-        "hash": "7749705898111132596"
+        "file": "tsconfig.base.json",
+        "hash": "423351731074598405"
       },
       {
         "file": ".gitignore",
         "hash": "6533975126999815229"
-      },
-      {
-        "file": ".mcp.json",
-        "hash": "16635761437242934062"
       },
       {
         "file": "DEPLOYMENT.md",
@@ -83,44 +75,52 @@
         "hash": "5706578983456977230"
       },
       {
-        "file": "README.md",
-        "hash": "17779297153991470282"
-      },
-      {
         "file": "pnpm-lock.yaml",
         "hash": "2103771454342343381"
+      },
+      {
+        "file": "ROUTING_SETUP.md",
+        "hash": "11484227070800776888"
+      },
+      {
+        "file": "postcss.config.js",
+        "hash": "7749705898111132596"
       },
       {
         "file": "nx.json",
         "hash": "10786912969479474318"
       },
       {
-        "file": "AGENTS.md",
-        "hash": "5706578983456977230"
+        "file": "README.md",
+        "hash": "17779297153991470282"
       },
       {
-        "file": "PROJECT_SUMMARY.md",
-        "hash": "13796446490577057398"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
-      },
-      {
-        "file": "package.json",
-        "hash": "10764736375448557016"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "6742193365340070648"
+        "file": ".mcp.json",
+        "hash": "16635761437242934062"
       },
       {
         "file": "CONTRIBUTING.md",
         "hash": "5073346764974627200"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "423351731074598405"
+        "file": ".gemini/settings.json",
+        "hash": "5921792102792576356"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "6742193365340070648"
+      },
+      {
+        "file": "ARCHITECTURE.md",
+        "hash": "11095640533682211180"
+      },
+      {
+        "file": "package.json",
+        "hash": "10764736375448557016"
+      },
+      {
+        "file": "PROJECT_SUMMARY.md",
+        "hash": "13796446490577057398"
       }
     ],
     "projectFileMap": {
@@ -561,10 +561,6 @@
           ]
         },
         {
-          "file": "apps/web/src/components/reusableComponents/skeleton.tsx",
-          "hash": "10343807954301218550"
-        },
-        {
           "file": "apps/web/src/components/reusableComponents/slider.tsx",
           "hash": "14973200892071827906",
           "deps": [
@@ -746,6 +742,15 @@
           "deps": [
             "npm:react@18.3.1",
             "npm:motion"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/AnimatedIncidentPreview.tsx",
+          "hash": "3231826563885955233",
+          "deps": [
+            "npm:motion",
+            "npm:react@18.3.1",
+            "npm:lucide-react"
           ]
         },
         {
@@ -963,7 +968,7 @@
         },
         {
           "file": "apps/web/src/pages/projects/ProjectMobile.tsx",
-          "hash": "3244421341483603138",
+          "hash": "17524941612528275862",
           "deps": [
             "npm:react@18.3.1"
           ]
