@@ -94,6 +94,29 @@ const AnalyticsFeature = lazy(() =>
     })
   )
 );
+const ForStartupsPage = lazy(() =>
+  import("../pages/landing/components/solutions/ForStartupsPage").then(
+    (m: any) => ({
+      default: (m && (m.default ?? m.ForStartupsPage)) as any,
+    })
+  )
+);
+
+const ForEnterprisePage = lazy(() =>
+  import("../pages/landing/components/solutions/ForEnterprisePage").then(
+    (m: any) => ({
+      default: (m && (m.default ?? m.ForEnterprisePage)) as any,
+    })
+  )
+);
+
+const ForRemoteTeamsPage = lazy(() =>
+  import("../pages/landing/components/solutions/ForRemoteTeamsPage").then(
+    (m: any) => ({
+      default: (m && (m.default ?? m.ForRemoteTeamsPage)) as any,
+    })
+  )
+);
 
 /**
  * Centralized route configuration for the entire app.
@@ -186,6 +209,36 @@ export const FEATURE_ROUTES: AppRoute[] = [
     requiresAuth: false,
     allowedRoles: [],
     description: "Analytics feature showcase",
+  },
+  {
+    path: ROUTE_PATHS.SOLUTIONS_STARTUPS,
+    label: "For Startups",
+    Component: ForStartupsPage,
+    showInNav: false,
+    order: 4,
+    requiresAuth: false,
+    allowedRoles: [],
+    description: "For startups page",
+  },
+  {
+    path: ROUTE_PATHS.SOLUTIONS_ENTERPRISE,
+    label: "For Enterprise",
+    Component: ForEnterprisePage,
+    showInNav: false,
+    order: 5,
+    requiresAuth: false,
+    allowedRoles: [],
+    description: "For enterprise page",
+  },
+  {
+    path: ROUTE_PATHS.SOLUTIONS_REMOTE,
+    label: "For Remote Teams",
+    Component: ForRemoteTeamsPage,
+    showInNav: false,
+    order: 5,
+    requiresAuth: false,
+    allowedRoles: [],
+    description: "For remote teams page",
   },
 ];
 

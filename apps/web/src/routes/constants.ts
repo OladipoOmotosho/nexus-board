@@ -33,6 +33,12 @@ export const ROUTE_PATHS = {
   FEATURE_PROJECT_BOARDS: "/features/project-boards",
   FEATURE_ANALYTICS: "/features/analytics",
 
+  //solutions  SOLUTIONS_STARTUPS:
+  SOLUTIONS_STARTUPS: "/solutions/startups",
+  SOLUTIONS_ENTERPRISE: "/solutions/enterprise",
+  SOLUTIONS_REMOTE: "/solutions/remote",
+  SOLUTIONS_AGENCIES: "/solutions/agencies",
+
   // Catch-all / Not Found
   NOT_FOUND: "*",
 } as const;

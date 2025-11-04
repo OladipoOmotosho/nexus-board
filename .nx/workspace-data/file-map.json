@@ -51,44 +51,20 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "nx.json",
-        "hash": "10786912969479474318"
-      },
-      {
-        "file": "README.md",
-        "hash": "17779297153991470282"
-      },
-      {
-        "file": ".mcp.json",
-        "hash": "16635761437242934062"
+        "file": "ROUTING_SETUP.md",
+        "hash": "16484387272391653889"
       },
       {
         "file": "AGENTS.md",
         "hash": "5706578983456977230"
       },
       {
-        "file": "CLAUDE.md",
-        "hash": "5706578983456977230"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6533975126999815229"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
-      },
-      {
         "file": "DEPLOYMENT.md",
         "hash": "9587723095712302528"
       },
       {
-        "file": "package.json",
-        "hash": "10764736375448557016"
-      },
-      {
-        "file": "ARCHITECTURE.md",
-        "hash": "11095640533682211180"
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
       },
       {
         "file": "postcss.config.js",
@@ -99,28 +75,52 @@
         "hash": "13796446490577057398"
       },
       {
-        "file": ".gemini/settings.json",
-        "hash": "5921792102792576356"
+        "file": "pnpm-workspace.yaml",
+        "hash": "6742193365340070648"
       },
       {
-        "file": "ROUTING_SETUP.md",
-        "hash": "16484387272391653889"
+        "file": ".gemini/settings.json",
+        "hash": "5921792102792576356"
       },
       {
         "file": "CONTRIBUTING.md",
         "hash": "5073346764974627200"
       },
       {
-        "file": "pnpm-lock.yaml",
-        "hash": "2103771454342343381"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "6742193365340070648"
+        "file": "CLAUDE.md",
+        "hash": "5706578983456977230"
       },
       {
         "file": "tsconfig.base.json",
         "hash": "423351731074598405"
+      },
+      {
+        "file": "ARCHITECTURE.md",
+        "hash": "11095640533682211180"
+      },
+      {
+        "file": "package.json",
+        "hash": "10764736375448557016"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6533975126999815229"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10786912969479474318"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "2103771454342343381"
+      },
+      {
+        "file": "README.md",
+        "hash": "17779297153991470282"
+      },
+      {
+        "file": ".mcp.json",
+        "hash": "16635761437242934062"
       }
     ],
     "projectFileMap": {
@@ -944,6 +944,33 @@
           "hash": "6437010018474030128"
         },
         {
+          "file": "apps/web/src/pages/landing/components/solutions/ForEnterprisePage.tsx",
+          "hash": "18130880555241748948",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/solutions/ForRemoteTeamsPage.tsx",
+          "hash": "1858818776196499666",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/solutions/ForStartupsPage.tsx",
+          "hash": "17129316664854909774",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/landing/constants/animations.ts",
           "hash": "4752944260017965616",
           "deps": [
@@ -1059,7 +1086,7 @@
         },
         {
           "file": "apps/web/src/routes/constants.ts",
-          "hash": "11552381796002341862"
+          "hash": "16369989674877638184"
         },
         {
           "file": "apps/web/src/routes/guards.tsx",
@@ -1070,7 +1097,7 @@
         },
         {
           "file": "apps/web/src/routes/routes.config.ts",
-          "hash": "7024283871946340840",
+          "hash": "15359970311332732113",
           "deps": [
             "npm:react@18.3.1"
           ]
