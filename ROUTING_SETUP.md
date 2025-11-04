@@ -18,7 +18,7 @@ I've built a **production-ready, centralized routing system** for your Nexus Boa
    - `UserRole` enum - GUEST, USER, ADMIN, OWNER
    - `AuthContext` interface - auth state type
    - `User` interface - user data type
-   - Type-safe route definitions
+   - Type-safe route definitions.
 
 3. **`src/routes/guards.tsx`**
 
