@@ -1,81 +1,20 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import {
-  BarChart3,
-  TrendingUp,
   ArrowRight,
   PieChart,
   Activity,
   Target,
   Clock,
-  Zap,
-  FileText,
+  BarChart3,
 } from "lucide-react";
-import { LandingNavbar } from "../nav/LandingNavbar";
-import { ScrollProgress } from "../ScrollProgress";
+import { NavWrapper } from "../nav/NavWrapper";
+import { analyticsFeatures, analyticsMetrics } from "./featuresData";
 
-const features = [
-  {
-    icon: BarChart3,
-    title: "Custom Dashboards",
-    description:
-      "Create personalized dashboards with the metrics that matter most to your team.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Performance Tracking",
-    description:
-      "Monitor team velocity, completion rates, and productivity trends over time.",
-  },
-  {
-    icon: PieChart,
-    title: "Visual Reports",
-    description:
-      "Beautiful charts and graphs that make data easy to understand and share.",
-  },
-  {
-    icon: Target,
-    title: "Goal Progress",
-    description:
-      "Track progress towards goals and objectives with real-time updates.",
-  },
-  {
-    icon: Clock,
-    title: "Time Analytics",
-    description:
-      "Understand where time is spent and identify bottlenecks in your workflow.",
-  },
-  {
-    icon: FileText,
-    title: "Export Reports",
-    description:
-      "Generate detailed reports in PDF or CSV format for stakeholders.",
-  },
-];
-
-const metrics = [
-  {
-    label: "Tasks Completed",
-    value: "1,247",
-    change: "+23%",
-    trend: "up",
-  },
-  {
-    label: "Team Velocity",
-    value: "42 pts/week",
-    change: "+15%",
-    trend: "up",
-  },
-  {
-    label: "Avg. Cycle Time",
-    value: "3.2 days",
-    change: "-18%",
-    trend: "down",
-  },
-];
+const features = analyticsFeatures;
+const metrics = analyticsMetrics;
 
 export default function AnalyticsFeature() {
-  const heroRef = useRef(null);
   const featuresRef = useRef(null);
   const demoRef = useRef(null);
 
@@ -83,14 +22,9 @@ export default function AnalyticsFeature() {
   const demoInView = useInView(demoRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute w-96 h-96 rounded-full blur-3xl opacity-20"
@@ -377,6 +311,6 @@ export default function AnalyticsFeature() {
           </div>
         </motion.div>
       </section>
-    </div>
+    </NavWrapper>
   );
 }

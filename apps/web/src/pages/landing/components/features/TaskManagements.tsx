@@ -1,81 +1,18 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Users, ArrowRight, CheckSquare } from "lucide-react";
+import { NavWrapper } from "../nav/NavWrapper";
 import {
-  ArrowRight,
-  Users,
-  CheckSquare,
-  Calendar,
-  Bell,
-  Tag,
-  TrendingUp,
-} from "lucide-react";
-import { LandingNavbar } from "../nav/LandingNavbar";
-import { ScrollProgress } from "../ScrollProgress";
+  taskManagementFeatures,
+  taskManagementStats,
+  taskManagementTestimonials,
+} from "./featuresData";
 
-const features = [
-  {
-    icon: CheckSquare,
-    title: "Kanban Boards",
-    description:
-      "Visualize your workflow with drag-and-drop boards that make task management intuitive and efficient.",
-  },
-  {
-    icon: Calendar,
-    title: "Due Date Tracking",
-    description:
-      "Never miss a deadline with smart reminders and calendar integration for all your tasks.",
-  },
-  {
-    icon: Users,
-    title: "Team Assignment",
-    description:
-      "Assign tasks to team members instantly and track their progress in real-time.",
-  },
-  {
-    icon: Tag,
-    title: "Labels & Tags",
-    description:
-      "Organize tasks with custom labels, priorities, and categories for better filtering.",
-  },
-  {
-    icon: Bell,
-    title: "Smart Notifications",
-    description:
-      "Get notified about updates, mentions, and approaching deadlines automatically.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Progress Tracking",
-    description:
-      "Monitor task completion rates and team productivity with detailed analytics.",
-  },
-];
-
-const stats = [
-  { value: "3x", label: "Faster Task Completion" },
-  { value: "94%", label: "Team Satisfaction" },
-  { value: "50%", label: "Time Saved Weekly" },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Task management has never been this intuitive. Our team's productivity increased by 40% in the first month.",
-    author: "Sarah Chen",
-    role: "Product Manager",
-    company: "TechCorp",
-  },
-  {
-    quote:
-      "The visual boards and real-time updates make it easy to keep everyone aligned and focused on priorities.",
-    author: "Mike Johnson",
-    role: "Engineering Lead",
-    company: "StartupXYZ",
-  },
-];
+const features = taskManagementFeatures;
+const stats = taskManagementStats;
+const testimonials = taskManagementTestimonials;
 
 export default function TaskManagement() {
-  const heroRef = useRef(null);
   const featuresRef = useRef(null);
   const demoRef = useRef(null);
 
@@ -83,14 +20,9 @@ export default function TaskManagement() {
   const demoInView = useInView(demoRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         {/* Animated background blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -434,6 +366,6 @@ export default function TaskManagement() {
           </div>
         </motion.div>
       </section>
-    </div>
+    </NavWrapper>
   );
 }

@@ -1,90 +1,20 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import {
-  LayoutGrid,
-  Columns,
-  ArrowRight,
-  Eye,
-  Layers,
-  Filter,
-  Workflow,
-  GitBranch,
-} from "lucide-react";
-import { LandingNavbar } from "../nav/LandingNavbar";
-import { ScrollProgress } from "../ScrollProgress";
+import { LayoutGrid, Columns, ArrowRight, GitBranch } from "lucide-react";
+import { NavWrapper } from "../nav/NavWrapper";
+import { projectBoardsFeatures, projectBoardsViewModes } from "./featuresData";
 
-const features = [
-  {
-    icon: Columns,
-    title: "Custom Columns",
-    description:
-      "Create unlimited columns tailored to your team's workflow and processes.",
-  },
-  {
-    icon: Eye,
-    title: "Multiple Views",
-    description:
-      "Switch between board, list, timeline, and calendar views effortlessly.",
-  },
-  {
-    icon: Filter,
-    title: "Advanced Filtering",
-    description:
-      "Filter tasks by status, assignee, priority, tags, and custom fields.",
-  },
-  {
-    icon: Workflow,
-    title: "Automation Rules",
-    description:
-      "Set up rules to automate repetitive tasks and streamline your workflow.",
-  },
-  {
-    icon: Layers,
-    title: "Template Library",
-    description:
-      "Start faster with pre-built templates for common project types.",
-  },
-  {
-    icon: GitBranch,
-    title: "Dependencies",
-    description:
-      "Link tasks together and visualize dependencies across your projects.",
-  },
-];
-
-const viewModes = [
-  {
-    name: "Board View",
-    description: "Visualize work in kanban-style columns",
-    icon: LayoutGrid,
-  },
-  {
-    name: "List View",
-    description: "See all tasks in a detailed table",
-    icon: Columns,
-  },
-  {
-    name: "Timeline",
-    description: "Plan projects with gantt-style timelines",
-    icon: GitBranch,
-  },
-];
+const features = projectBoardsFeatures;
+const viewModes = projectBoardsViewModes;
 
 export default function ProjectBoards() {
-  const heroRef = useRef(null);
   const featuresRef = useRef(null);
-
   const featuresInView = useInView(featuresRef, { once: true, amount: 0.2 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute w-72 h-72 rounded-full blur-3xl opacity-15"
@@ -347,6 +277,6 @@ export default function ProjectBoards() {
           </div>
         </motion.div>
       </section>
-    </div>
+    </NavWrapper>
   );
 }

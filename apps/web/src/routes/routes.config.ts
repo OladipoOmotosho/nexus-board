@@ -118,6 +118,14 @@ const ForRemoteTeamsPage = lazy(() =>
   )
 );
 
+const ForAgenciesPage = lazy(() =>
+  import("../pages/landing/components/solutions/ForAgenciesPage").then(
+    (m: any) => ({
+      default: (m && (m.default ?? m.ForAgenciesPage)) as any,
+    })
+  )
+);
+
 /**
  * Centralized route configuration for the entire app.
  * Organized by route type: public, protected, admin, etc.
@@ -239,6 +247,16 @@ export const FEATURE_ROUTES: AppRoute[] = [
     requiresAuth: false,
     allowedRoles: [],
     description: "For remote teams page",
+  },
+  {
+    path: ROUTE_PATHS.SOLUTIONS_AGENCIES,
+    label: "For Agencies",
+    Component: ForAgenciesPage,
+    showInNav: false,
+    order: 5,
+    requiresAuth: false,
+    allowedRoles: [],
+    description: "For agencies page",
   },
 ];
 

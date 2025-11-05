@@ -1,13 +1,18 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { ArrowRight, Building2, CheckCircle2, Shield } from "lucide-react";
+import { Briefcase, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 import { NavWrapper } from "../nav/NavWrapper";
-import { enterpriseFeatures, enterpriseCompliance } from "./solutionsData";
+import {
+  agenciesFeatures,
+  agenciesStats,
+  agenciesBenefits,
+} from "./solutionsData";
 
-const features = enterpriseFeatures;
-const compliance = enterpriseCompliance;
+const features = agenciesFeatures;
+const stats = agenciesStats;
+const benefits = agenciesBenefits;
 
-export default function ForEnterprisePage() {
+export function ForAgenciesPage() {
   const solutionsRef = useRef(null);
 
   const featuresInView = useInView(solutionsRef, { once: true, amount: 0.2 });
@@ -39,8 +44,8 @@ export default function ForEnterprisePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border/50 rounded-full text-sm"
             >
-              <Building2 className="size-4 text-primary" />
-              <span className="font-medium">For Enterprise</span>
+              <Briefcase className="size-4 text-primary" />
+              <span className="font-medium">For Agencies</span>
             </motion.div>
 
             <motion.div
@@ -50,9 +55,9 @@ export default function ForEnterprisePage() {
               className="space-y-4"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight">
-                Enterprise-grade{" "}
+                Manage client{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">security</span>
+                  <span className="relative z-10">projects</span>
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-primary/20"
                     viewBox="0 0 300 12"
@@ -69,8 +74,8 @@ export default function ForEnterprisePage() {
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Built for large organizations with advanced security,
-                compliance, and support requirements.
+                Built for agencies managing multiple clients. Keep projects
+                organized, teams aligned, and clients happy.
               </p>
             </motion.div>
 
@@ -81,11 +86,11 @@ export default function ForEnterprisePage() {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98] text-base font-medium shadow-sm">
-                Contact sales
+                Start free trial
                 <ArrowRight className="size-4" />
               </button>
               <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-card border border-border/50 rounded-lg hover:bg-muted transition-colors text-base font-medium">
-                Request demo
+                Book a demo
               </button>
             </motion.div>
 
@@ -93,20 +98,22 @@ export default function ForEnterprisePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="pt-12"
+              className="grid grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto"
             >
-              <p className="text-sm text-muted-foreground mb-6">
-                Trusted by industry leaders
-              </p>
-              <div className="flex items-center justify-center gap-8 text-muted-foreground">
-                {["Fortune 500", "Government", "Healthcare", "Finance"].map(
-                  (industry) => (
-                    <span key={industry} className="text-sm font-medium">
-                      {industry}
-                    </span>
-                  )
-                )}
-              </div>
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-semibold mb-2">
+                    {stat.value}
+                  </div>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.div>
         </div>
@@ -124,11 +131,10 @@ export default function ForEnterprisePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-              Built for enterprise scale
+              Built for agency workflows
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced features and infrastructure for the world's largest
-              organizations
+              Everything you need to manage clients, projects, and profitability
             </p>
           </motion.div>
 
@@ -158,9 +164,9 @@ export default function ForEnterprisePage() {
         </div>
       </section>
 
-      {/* Compliance Section */}
+      {/* Benefits Section */}
       <section className="py-24 px-6 bg-muted/30">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -168,31 +174,38 @@ export default function ForEnterprisePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <Shield className="size-12 text-primary mx-auto mb-6" />
+            <Sparkles className="size-12 text-primary mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-              Security & compliance
+              Agency-specific features
             </h2>
             <p className="text-xl text-muted-foreground">
-              Meet the highest standards for data protection and regulatory
-              compliance
+              Tools designed specifically for agencies managing multiple clients
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {compliance.map((item, idx) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="flex items-center gap-3 bg-card border border-border/50 rounded-lg p-4"
-              >
-                <CheckCircle2 className="size-5 text-primary shrink-0" />
-                <span className="text-base font-medium">{item}</span>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-card border border-border/50 rounded-2xl p-8 md:p-12"
+          >
+            <div className="space-y-4">
+              {benefits.map((benefit, idx) => (
+                <motion.div
+                  key={benefit}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 + idx * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle2 className="size-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-base">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -207,15 +220,15 @@ export default function ForEnterprisePage() {
         >
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">
-              Ready for enterprise?
+              Ready to streamline your agency?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss how Nexus Board can meet your organization's unique
-              requirements.
+              Join thousands of agencies using Nexus Board to deliver better
+              results for clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-base font-medium">
-                Contact sales
+                Start free trial
                 <ArrowRight className="size-4" />
               </button>
               <button className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border/50 rounded-lg hover:bg-muted transition-colors text-base font-medium">
@@ -223,7 +236,7 @@ export default function ForEnterprisePage() {
               </button>
             </div>
             <p className="text-xs text-muted-foreground mt-6">
-              Custom pricing and contracts available
+              14-day free trial. Special pricing for agencies.
             </p>
           </div>
         </motion.div>

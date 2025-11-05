@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Menu, ChevronDown, X, Moon, Sun } from "lucide-react";
+import { Menu, ChevronDown, X, Moon, Sun, Monitor } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Button } from "../../../../components/reusableComponents/button";
 import { useTheme } from "../../../../hooks/useTheme";
@@ -21,7 +21,7 @@ export function LandingNavbar() {
   const [activeDropdown, setActiveDropdown] = useState<SectionKey | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const reduceMotion = useReducedMotion();
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, getThemeTitle } = useTheme();
   const { scrollToSection } = useScrollToSection();
   const navigate = useNavigate();
 
@@ -202,13 +202,16 @@ export function LandingNavbar() {
                     : "light"
                 )
               }
-              className="p-2 rounded-md hover:bg-accent transition"
-              title="Toggle theme"
+              className="p-2 rounded-md hover:bg-accent transition cursor-pointer"
+              title={getThemeTitle()}
+              aria-label={getThemeTitle()}
             >
-              {theme === "dark" ? (
+              {theme === "light" ? (
+                <Sun className="size-5 text-foreground" />
+              ) : theme === "dark" ? (
                 <Moon className="size-5 text-foreground" />
               ) : (
-                <Sun className="size-5 text-foreground" />
+                <Monitor className="size-5 text-foreground" />
               )}
             </button>
             {/* Desktop CTAs */}

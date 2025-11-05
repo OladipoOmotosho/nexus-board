@@ -1,21 +1,10 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Badge } from "../../../components/reusableComponents/badge";
+import { integrationsList } from "../../../assets/icons";
 
 export function IntegrationsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
-
-  const integrations = [
-    { name: "Slack", logo: "💬" },
-    { name: "GitHub", logo: "🐙" },
-    { name: "Google Drive", logo: "📁" },
-    { name: "Figma", logo: "🎨" },
-    { name: "Zoom", logo: "📹" },
-    { name: "Notion", logo: "📝" },
-    { name: "Linear", logo: "⚡" },
-    { name: "Jira", logo: "📊" },
-  ];
 
   return (
     <section ref={ref} className="py-16 px-6 bg-muted/30">
@@ -37,7 +26,7 @@ export function IntegrationsSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap justify-center items-center gap-8"
         >
-          {integrations.map((integration, idx) => (
+          {integrationsList.map((integration, idx) => (
             <motion.div
               key={integration.name}
               initial={{ opacity: 0, scale: 0 }}
@@ -48,7 +37,11 @@ export function IntegrationsSection() {
               whileHover={{ scale: 1.1 }}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/30 transition-all cursor-pointer"
             >
-              <span className="text-2xl">{integration.logo}</span>
+              <img
+                src={integration.icon}
+                alt={integration.name}
+                className="size-6 object-contain"
+              />
               <span className="font-medium">{integration.name}</span>
             </motion.div>
           ))}

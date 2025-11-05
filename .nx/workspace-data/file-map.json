@@ -51,52 +51,24 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "ROUTING_SETUP.md",
-        "hash": "16484387272391653889"
-      },
-      {
-        "file": "AGENTS.md",
-        "hash": "5706578983456977230"
-      },
-      {
-        "file": "DEPLOYMENT.md",
-        "hash": "9587723095712302528"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "1379983966652230747"
-      },
-      {
-        "file": "postcss.config.js",
-        "hash": "7749705898111132596"
-      },
-      {
-        "file": "PROJECT_SUMMARY.md",
-        "hash": "13796446490577057398"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "6742193365340070648"
-      },
-      {
-        "file": ".gemini/settings.json",
-        "hash": "5921792102792576356"
-      },
-      {
-        "file": "CONTRIBUTING.md",
-        "hash": "5073346764974627200"
-      },
-      {
         "file": "CLAUDE.md",
         "hash": "5706578983456977230"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "423351731074598405"
-      },
-      {
         "file": "ARCHITECTURE.md",
         "hash": "11095640533682211180"
+      },
+      {
+        "file": "README.md",
+        "hash": "17779297153991470282"
+      },
+      {
+        "file": ".mcp.json",
+        "hash": "16635761437242934062"
+      },
+      {
+        "file": ".gemini/settings.json",
+        "hash": "5921792102792576356"
       },
       {
         "file": "package.json",
@@ -107,29 +79,51 @@
         "hash": "6533975126999815229"
       },
       {
-        "file": "nx.json",
-        "hash": "10786912969479474318"
-      },
-      {
         "file": "pnpm-lock.yaml",
         "hash": "2103771454342343381"
       },
       {
-        "file": "README.md",
-        "hash": "17779297153991470282"
+        "file": "tsconfig.base.json",
+        "hash": "9181609162761674186"
       },
       {
-        "file": ".mcp.json",
-        "hash": "16635761437242934062"
+        "file": "ROUTING_SETUP.md",
+        "hash": "16484387272391653889"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "6742193365340070648"
+      },
+      {
+        "file": "postcss.config.js",
+        "hash": "7749705898111132596"
+      },
+      {
+        "file": "PROJECT_SUMMARY.md",
+        "hash": "13796446490577057398"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "5706578983456977230"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "5073346764974627200"
+      },
+      {
+        "file": "DEPLOYMENT.md",
+        "hash": "9587723095712302528"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1379983966652230747"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10786912969479474318"
       }
     ],
     "projectFileMap": {
-      "api": [
-        {
-          "file": "apps/api/project.json",
-          "hash": "11042671037508349635"
-        }
-      ],
       "web": [
         {
           "file": "apps/web/index.html",
@@ -227,6 +221,54 @@
         {
           "file": "apps/web/src/assets/.gitkeep",
           "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/web/src/assets/icons/Google_Drive_icon-icons.com_75713.png",
+          "hash": "13583329011446389467"
+        },
+        {
+          "file": "apps/web/src/assets/icons/figma-svgrepo-com.svg",
+          "hash": "4407381920080854880"
+        },
+        {
+          "file": "apps/web/src/assets/icons/github-color-svgrepo-com.svg",
+          "hash": "5506718647275499680"
+        },
+        {
+          "file": "apps/web/src/assets/icons/googledrive-svgrepo-com.svg",
+          "hash": "13158020173694647284"
+        },
+        {
+          "file": "apps/web/src/assets/icons/index.ts",
+          "hash": "3819436059052978316"
+        },
+        {
+          "file": "apps/web/src/assets/icons/jira-svgrepo-com.svg",
+          "hash": "17118722762191870823"
+        },
+        {
+          "file": "apps/web/src/assets/icons/linear-svgrepo-com.svg",
+          "hash": "17654166397035427625"
+        },
+        {
+          "file": "apps/web/src/assets/icons/notion-logo-svgrepo-com.svg",
+          "hash": "8757733965220206700"
+        },
+        {
+          "file": "apps/web/src/assets/icons/notion_alt_macos_bigsur_icon_189899.png",
+          "hash": "11132887598320172987"
+        },
+        {
+          "file": "apps/web/src/assets/icons/slack-svgrepo-com (1).svg",
+          "hash": "5095913774333217371"
+        },
+        {
+          "file": "apps/web/src/assets/icons/slack-svgrepo-com.svg",
+          "hash": "12294100513668790640"
+        },
+        {
+          "file": "apps/web/src/assets/icons/zoom-communication-network-conversation-connection-internet-svgrepo-com.svg",
+          "hash": "10842675055428606121"
         },
         {
           "file": "apps/web/src/components/ComponentShowcase.tsx",
@@ -662,7 +704,7 @@
         },
         {
           "file": "apps/web/src/hooks/useTheme.ts",
-          "hash": "10562842886612355660",
+          "hash": "18278501053277930042",
           "deps": [
             "npm:react@18.3.1"
           ]
@@ -707,11 +749,11 @@
         },
         {
           "file": "apps/web/src/pages/auth/SignIn.tsx",
-          "hash": "9310646587012918445",
+          "hash": "5736706045625904230",
           "deps": [
             "npm:react@18.3.1",
-            "npm:react-router-dom",
-            "npm:lucide-react"
+            "npm:lucide-react",
+            "npm:motion"
           ]
         },
         {
@@ -851,7 +893,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/IntegrationSection.tsx",
-          "hash": "15719401621393322497",
+          "hash": "9215735305418835831",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion"
@@ -884,7 +926,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/features/AnalyticsFeature.tsx",
-          "hash": "6324507534645447459",
+          "hash": "5340724113284667262",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -893,7 +935,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/features/ProjectBoards.tsx",
-          "hash": "652243743351039914",
+          "hash": "8857414391349183296",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -902,7 +944,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/features/TaskManagements.tsx",
-          "hash": "3853089431336615915",
+          "hash": "14735738227575339699",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -911,7 +953,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/features/TeamCollaboration.tsx",
-          "hash": "8978813440319430971",
+          "hash": "7603616150303926311",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -919,8 +961,15 @@
           ]
         },
         {
+          "file": "apps/web/src/pages/landing/components/features/featuresData.ts",
+          "hash": "3960957856101522967",
+          "deps": [
+            "npm:lucide-react"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/landing/components/nav/LandingNavbar.tsx",
-          "hash": "5652967935408929568",
+          "hash": "10145350415146363452",
           "deps": [
             "npm:react@18.3.1",
             "npm:lucide-react",
@@ -936,6 +985,14 @@
           ]
         },
         {
+          "file": "apps/web/src/pages/landing/components/nav/NavWrapper.tsx",
+          "hash": "18029603101613492815",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/landing/components/nav/constants/navAnimations.ts",
           "hash": "11814721555368677764"
         },
@@ -944,8 +1001,17 @@
           "hash": "6437010018474030128"
         },
         {
+          "file": "apps/web/src/pages/landing/components/solutions/ForAgenciesPage.tsx",
+          "hash": "1523283921244087774",
+          "deps": [
+            "npm:react@18.3.1",
+            "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
           "file": "apps/web/src/pages/landing/components/solutions/ForEnterprisePage.tsx",
-          "hash": "18130880555241748948",
+          "hash": "7039405672010214898",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -954,7 +1020,7 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/solutions/ForRemoteTeamsPage.tsx",
-          "hash": "1858818776196499666",
+          "hash": "9714786497710713991",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
@@ -963,10 +1029,17 @@
         },
         {
           "file": "apps/web/src/pages/landing/components/solutions/ForStartupsPage.tsx",
-          "hash": "17129316664854909774",
+          "hash": "11969383288628266693",
           "deps": [
             "npm:react@18.3.1",
             "npm:motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/landing/components/solutions/solutionsData.ts",
+          "hash": "12070605383263615214",
+          "deps": [
             "npm:lucide-react"
           ]
         },
@@ -1015,10 +1088,11 @@
         },
         {
           "file": "apps/web/src/pages/register/SignUp.tsx",
-          "hash": "1770587393969346938",
+          "hash": "15998220366459407633",
           "deps": [
             "npm:react@18.3.1",
-            "npm:react-router-dom"
+            "npm:lucide-react",
+            "npm:motion"
           ]
         },
         {
@@ -1097,7 +1171,7 @@
         },
         {
           "file": "apps/web/src/routes/routes.config.ts",
-          "hash": "15359970311332732113",
+          "hash": "9579484268979336231",
           "deps": [
             "npm:react@18.3.1"
           ]
@@ -1128,7 +1202,7 @@
         },
         {
           "file": "apps/web/tsconfig.app.json",
-          "hash": "13242867920615898463"
+          "hash": "12375564885220094706"
         },
         {
           "file": "apps/web/tsconfig.json",
@@ -1142,6 +1216,12 @@
             "npm:@vitejs/plugin-react",
             "npm:vite-tsconfig-paths"
           ]
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/project.json",
+          "hash": "11042671037508349635"
         }
       ]
     }

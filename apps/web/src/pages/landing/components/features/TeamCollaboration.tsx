@@ -1,78 +1,23 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Users, ArrowRight, MessageSquare, Video, Share2 } from "lucide-react";
+import { NavWrapper } from "../nav/NavWrapper";
 import {
-  Users,
-  MessageSquare,
-  Video,
-  ArrowRight,
-  Share2,
-  AtSign,
-  FileText,
-  Globe,
-} from "lucide-react";
-import { LandingNavbar } from "../nav/LandingNavbar";
-import { ScrollProgress } from "../ScrollProgress";
+  teamCollaborationFeatures,
+  teamCollaborationStats,
+} from "./featuresData";
 
-const features = [
-  {
-    icon: MessageSquare,
-    title: "Real-time Chat",
-    description:
-      "Communicate instantly with team members through threaded conversations and direct messages.",
-  },
-  {
-    icon: AtSign,
-    title: "Mentions & Notifications",
-    description:
-      "Tag teammates to get their attention and stay updated with smart notifications.",
-  },
-  {
-    icon: Share2,
-    title: "File Sharing",
-    description:
-      "Share files, images, and documents directly in conversations with unlimited storage.",
-  },
-  {
-    icon: Video,
-    title: "Video Conferencing",
-    description:
-      "Start video calls instantly with screen sharing and recording capabilities.",
-  },
-  {
-    icon: FileText,
-    title: "Shared Documents",
-    description:
-      "Collaborate on documents in real-time with version control and commenting.",
-  },
-  {
-    icon: Globe,
-    title: "Remote-First Tools",
-    description:
-      "Built for distributed teams with timezone support and async collaboration features.",
-  },
-];
-
-const stats = [
-  { value: "85%", label: "Faster Communication" },
-  { value: "10x", label: "Better Team Alignment" },
-  { value: "60%", label: "Less Email Clutter" },
-];
+const features = teamCollaborationFeatures;
+const stats = teamCollaborationStats;
 
 export default function TeamCollaboration() {
-  const heroRef = useRef(null);
   const featuresRef = useRef(null);
-
   const featuresInView = useInView(featuresRef, { once: true, amount: 0.2 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute w-96 h-96 rounded-full blur-3xl opacity-20"
@@ -367,6 +312,6 @@ export default function TeamCollaboration() {
           </div>
         </motion.div>
       </section>
-    </div>
+    </NavWrapper>
   );
 }

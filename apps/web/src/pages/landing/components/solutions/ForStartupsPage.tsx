@@ -1,88 +1,26 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Rocket, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { NavWrapper } from "../nav/NavWrapper";
 import {
-  Rocket,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Zap,
-  DollarSign,
-  Clock,
-  Target,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
-import { ScrollProgress } from "../ScrollProgress";
-import { LandingNavbar } from "../nav/LandingNavbar";
+  startupsFeatures,
+  startupsStats,
+  startupsBenefits,
+} from "./solutionsData";
 
-const features = [
-  {
-    icon: Zap,
-    title: "Move Fast",
-    description:
-      "Ship products faster with streamlined workflows built for speed and agility.",
-  },
-  {
-    icon: DollarSign,
-    title: "Cost-Effective",
-    description:
-      "Generous free tier and startup-friendly pricing that scales with your growth.",
-  },
-  {
-    icon: Users,
-    title: "Team Collaboration",
-    description:
-      "Keep your growing team aligned with real-time collaboration tools.",
-  },
-  {
-    icon: Target,
-    title: "Focus on What Matters",
-    description:
-      "Spend time building your product, not managing project tools.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scale Seamlessly",
-    description:
-      "Start small, grow big. Our platform grows with your startup journey.",
-  },
-  {
-    icon: Clock,
-    title: "Quick Setup",
-    description: "Get your team up and running in minutes, not days.",
-  },
-];
-
-const stats = [
-  { value: "5K+", label: "Startups using Nexus" },
-  { value: "$2M+", label: "Funding raised by users" },
-  { value: "3x", label: "Faster time to market" },
-];
-
-const benefits = [
-  "Free for early-stage teams up to 10 members",
-  "No credit card required to start",
-  "Startup-friendly pricing that grows with you",
-  "Access to our startup community",
-  "Exclusive resources and templates",
-  "Priority support for funded startups",
-];
+const features = startupsFeatures;
+const stats = startupsStats;
+const benefits = startupsBenefits;
 
 export default function ForStartupsPage() {
-  const heroRef = useRef(null);
   const solutionsRef = useRef(null);
 
   const featuresInView = useInView(solutionsRef, { once: true, amount: 0.2 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         {/* Subtle background */}
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -310,6 +248,6 @@ export default function ForStartupsPage() {
           </div>
         </motion.div>
       </section>
-    </div>
+    </NavWrapper>
   );
 }

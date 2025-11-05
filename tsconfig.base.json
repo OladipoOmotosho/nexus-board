@@ -19,6 +19,7 @@
     "jsx": "react-jsx",
     "types": ["node", "vite/client"],
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@ui/*": ["packages/ui/src/*"],
       "@types/*": ["packages/types/src/*"],

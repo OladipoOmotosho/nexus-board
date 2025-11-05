@@ -1,98 +1,26 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Globe, ArrowRight, Home, CheckCircle2 } from "lucide-react";
+import { NavWrapper } from "../nav/NavWrapper";
 import {
-  Globe,
-  ArrowRight,
-  Video,
-  MessageSquare,
-  Clock,
-  Wifi,
-  Calendar,
-  FileText,
-  CheckCircle2,
-  Home,
-  Briefcase,
-  Users,
-  DollarSign,
-  BarChart3,
-  Layers,
-  Sparkles,
-} from "lucide-react";
-import { ScrollProgress } from "../ScrollProgress";
-import { LandingNavbar } from "../nav/LandingNavbar";
+  remoteTeamsFeatures,
+  remoteTeamsStats,
+  remoteTeamsBenefits,
+} from "./solutionsData";
 
-// ============================================================================
-// FOR REMOTE TEAMS PAGE
-// ============================================================================
-
-const remoteFeatures = [
-  {
-    icon: Video,
-    title: "Async-First Tools",
-    description:
-      "Work across time zones with video messages, threaded discussions, and status updates.",
-  },
-  {
-    icon: Clock,
-    title: "Timezone Support",
-    description:
-      "Automatic timezone detection and scheduling that works for everyone.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Real-time Chat",
-    description:
-      "Instant messaging and video calls when you need synchronous communication.",
-  },
-  {
-    icon: Wifi,
-    title: "Offline Mode",
-    description: "Work without internet and sync when you're back online.",
-  },
-  {
-    icon: Calendar,
-    title: "Flexible Scheduling",
-    description:
-      "Schedule tasks and meetings that respect everyone's working hours.",
-  },
-  {
-    icon: FileText,
-    title: "Documentation Hub",
-    description:
-      "Centralized knowledge base accessible to the entire distributed team.",
-  },
-];
-
-const remoteStats = [
-  { value: "100%", label: "Remote teams" },
-  { value: "85+", label: "Countries" },
-  { value: "24/7", label: "Collaboration" },
-];
-
-const remoteBenefits = [
-  "Works seamlessly across all time zones",
-  "Mobile apps for iOS and Android",
-  "Reliable performance on any connection speed",
-  "Async video and voice messages",
-  "Flexible notification settings",
-  "Meeting-free collaboration tools",
-];
+const features = remoteTeamsFeatures;
+const stats = remoteTeamsStats;
+const benefits = remoteTeamsBenefits;
 
 export function ForRemoteTeamsPage() {
-  const heroRef = useRef(null);
   const solutionsRef = useRef(null);
 
   const featuresInView = useInView(solutionsRef, { once: true, amount: 0.2 });
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <ScrollProgress />
-      <LandingNavbar />
+    <NavWrapper>
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50"
-      >
+      <section className="relative pt-32 pb-24 px-6 overflow-hidden border-b border-border/50">
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -172,7 +100,7 @@ export function ForRemoteTeamsPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="grid grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto"
             >
-              {remoteStats.map((stat, i) => (
+              {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
@@ -212,7 +140,7 @@ export function ForRemoteTeamsPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {remoteFeatures.map((feature, idx) => (
+            {features.map((feature, idx) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 40 }}
@@ -264,7 +192,7 @@ export function ForRemoteTeamsPage() {
             className="bg-card border border-border/50 rounded-2xl p-8 md:p-12"
           >
             <div className="space-y-4">
-              {remoteBenefits.map((benefit, idx) => (
+              {benefits.map((benefit, idx) => (
                 <motion.div
                   key={benefit}
                   initial={{ opacity: 0, x: -20 }}
@@ -281,13 +209,39 @@ export function ForRemoteTeamsPage() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}
 
-{
-  /* CTA Section
+      {/* CTA Section */}
       <section className="py-24 px-6">
         <motion.div
-          initial={{ opacity: */
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto rounded-2xl border border-border/50 p-12 md:p-16 text-center relative overflow-hidden bg-muted/30"
+        >
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 tracking-tight">
+              Ready to go remote?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Join thousands of distributed teams using Nexus Board to
+              collaborate effectively from anywhere.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-base font-medium">
+                Start free trial
+                <ArrowRight className="size-4" />
+              </button>
+              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border/50 rounded-lg hover:bg-muted transition-colors text-base font-medium">
+                Talk to remote teams
+              </button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-6">
+              Free for 14 days. No credit card required.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+    </NavWrapper>
+  );
 }

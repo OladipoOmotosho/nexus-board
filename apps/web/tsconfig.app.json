@@ -33,5 +33,5 @@
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx"
-, "tailwind.config.js"  ]
+  ]
 }
